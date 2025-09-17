@@ -1,0 +1,468 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F529327A-1DAC-48F5-91C0-4B7275C832BB}|EHL.Common\\EHL.Common.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.common\\models\\roleofmag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F529327A-1DAC-48F5-91C0-4B7275C832BB}|EHL.Common\\EHL.Common.csproj|solutionrelative:ehl.common\\models\\roleofmag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F529327A-1DAC-48F5-91C0-4B7275C832BB}|EHL.Common\\EHL.Common.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.common\\models\\errorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F529327A-1DAC-48F5-91C0-4B7275C832BB}|EHL.Common\\EHL.Common.csproj|solutionrelative:ehl.common\\models\\errorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F529327A-1DAC-48F5-91C0-4B7275C832BB}|EHL.Common\\EHL.Common.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.common\\models\\attribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F529327A-1DAC-48F5-91C0-4B7275C832BB}|EHL.Common\\EHL.Common.csproj|solutionrelative:ehl.common\\models\\attribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F529327A-1DAC-48F5-91C0-4B7275C832BB}|EHL.Common\\EHL.Common.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.common\\models\\base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F529327A-1DAC-48F5-91C0-4B7275C832BB}|EHL.Common\\EHL.Common.csproj|solutionrelative:ehl.common\\models\\base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F529327A-1DAC-48F5-91C0-4B7275C832BB}|EHL.Common\\EHL.Common.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.common\\models\\emer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F529327A-1DAC-48F5-91C0-4B7275C832BB}|EHL.Common\\EHL.Common.csproj|solutionrelative:ehl.common\\models\\emer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.api\\controllers\\roleofmagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|solutionrelative:ehl.api\\controllers\\roleofmagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.api\\helpers\\globalexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|solutionrelative:ehl.api\\helpers\\globalexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.api\\helpers\\claimhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|solutionrelative:ehl.api\\helpers\\claimhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|solutionrelative:ehl.api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.api\\helpers\\originrestrictionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|solutionrelative:ehl.api\\helpers\\originrestrictionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BCB867D-5D99-498B-A801-E9BCDE25413B}|EHL.DB\\EHL.DB.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.db\\implements\\emerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BCB867D-5D99-498B-A801-E9BCDE25413B}|EHL.DB\\EHL.DB.csproj|solutionrelative:ehl.db\\implements\\emerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.api\\controllers\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|solutionrelative:ehl.api\\controllers\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.api\\controllers\\emercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|solutionrelative:ehl.api\\controllers\\emercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|solutionrelative:ehl.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BCB867D-5D99-498B-A801-E9BCDE25413B}|EHL.DB\\EHL.DB.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.db\\implements\\landingpagedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BCB867D-5D99-498B-A801-E9BCDE25413B}|EHL.DB\\EHL.DB.csproj|solutionrelative:ehl.db\\implements\\landingpagedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.api\\controllers\\landingpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|solutionrelative:ehl.api\\controllers\\landingpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38AC4D36-BA1D-4C58-9525-5CFD8241728B}|EHL.Business\\EHL.Business.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.business\\implements\\landingpagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AC4D36-BA1D-4C58-9525-5CFD8241728B}|EHL.Business\\EHL.Business.csproj|solutionrelative:ehl.business\\implements\\landingpagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BCB867D-5D99-498B-A801-E9BCDE25413B}|EHL.DB\\EHL.DB.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.db\\infrastructure\\ilandingpagedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BCB867D-5D99-498B-A801-E9BCDE25413B}|EHL.DB\\EHL.DB.csproj|solutionrelative:ehl.db\\infrastructure\\ilandingpagedb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38AC4D36-BA1D-4C58-9525-5CFD8241728B}|EHL.Business\\EHL.Business.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.business\\interfaces\\ilandingpagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38AC4D36-BA1D-4C58-9525-5CFD8241728B}|EHL.Business\\EHL.Business.csproj|solutionrelative:ehl.business\\interfaces\\ilandingpagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.api\\controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|solutionrelative:ehl.api\\controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F529327A-1DAC-48F5-91C0-4B7275C832BB}|EHL.Common\\EHL.Common.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.common\\enum\\enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F529327A-1DAC-48F5-91C0-4B7275C832BB}|EHL.Common\\EHL.Common.csproj|solutionrelative:ehl.common\\enum\\enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.api\\controllers\\policycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|solutionrelative:ehl.api\\controllers\\policycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BCB867D-5D99-498B-A801-E9BCDE25413B}|EHL.DB\\EHL.DB.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.db\\interfaces\\iemerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BCB867D-5D99-498B-A801-E9BCDE25413B}|EHL.DB\\EHL.DB.csproj|solutionrelative:ehl.db\\interfaces\\iemerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.api\\controllers\\technicalaoaicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|solutionrelative:ehl.api\\controllers\\technicalaoaicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|solutionrelative:ehl.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|solutionrelative:ehl.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|c:\\users\\ankit\\downloads\\source_ehl_27june25\\source_ehl_27june25\\ehl.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4E0CE03F-977D-419D-95E1-6377D3DA0979}|EHL.Api\\EHL.Api.csproj|solutionrelative:ehl.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ErrorResponse.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\Models\\ErrorResponse.cs",
+              "RelativeDocumentMoniker": "EHL.Common\\Models\\ErrorResponse.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\Models\\ErrorResponse.cs",
+              "RelativeToolTip": "EHL.Common\\Models\\ErrorResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T09:17:28.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EMER.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\Models\\EMER.cs",
+              "RelativeDocumentMoniker": "EHL.Common\\Models\\EMER.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\Models\\EMER.cs",
+              "RelativeToolTip": "EHL.Common\\Models\\EMER.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwCkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T09:14:04.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Attribute.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\Models\\Attribute.cs",
+              "RelativeDocumentMoniker": "EHL.Common\\Models\\Attribute.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\Models\\Attribute.cs",
+              "RelativeToolTip": "EHL.Common\\Models\\Attribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T09:13:57.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RoleOfMag.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\Models\\RoleOfMag.cs",
+              "RelativeDocumentMoniker": "EHL.Common\\Models\\RoleOfMag.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\Models\\RoleOfMag.cs",
+              "RelativeToolTip": "EHL.Common\\Models\\RoleOfMag.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABEAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T08:48:03.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ClaimHelper.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Helpers\\ClaimHelper.cs",
+              "RelativeDocumentMoniker": "EHL.Api\\Helpers\\ClaimHelper.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Helpers\\ClaimHelper.cs",
+              "RelativeToolTip": "EHL.Api\\Helpers\\ClaimHelper.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAuwCkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T07:32:43.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GlobalExceptionHandlerMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Helpers\\GlobalExceptionHandlerMiddleware.cs",
+              "RelativeDocumentMoniker": "EHL.Api\\Helpers\\GlobalExceptionHandlerMiddleware.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Helpers\\GlobalExceptionHandlerMiddleware.cs",
+              "RelativeToolTip": "EHL.Api\\Helpers\\GlobalExceptionHandlerMiddleware.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAhwEkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T07:13:49.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Status.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\Status.cs",
+              "RelativeDocumentMoniker": "EHL.Api\\Controllers\\Status.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\Status.cs",
+              "RelativeToolTip": "EHL.Api\\Controllers\\Status.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T06:45:28.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Startup.cs",
+              "RelativeDocumentMoniker": "EHL.Api\\Startup.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Startup.cs",
+              "RelativeToolTip": "EHL.Api\\Startup.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T11:15:03.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Base.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\Models\\Base.cs",
+              "RelativeDocumentMoniker": "EHL.Common\\Models\\Base.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\Models\\Base.cs",
+              "RelativeToolTip": "EHL.Common\\Models\\Base.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwDAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T12:08:11.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RoleOfMagController.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\RoleOfMagController.cs",
+              "RelativeDocumentMoniker": "EHL.Api\\Controllers\\RoleOfMagController.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\RoleOfMagController.cs",
+              "RelativeToolTip": "EHL.Api\\Controllers\\RoleOfMagController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T08:47:49.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ILandingPageDB.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\Infrastructure\\ILandingPageDB.cs",
+              "RelativeDocumentMoniker": "EHL.DB\\Infrastructure\\ILandingPageDB.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\Infrastructure\\ILandingPageDB.cs",
+              "RelativeToolTip": "EHL.DB\\Infrastructure\\ILandingPageDB.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwBEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T12:09:47.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LandingPageDB.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\Implements\\LandingPageDB.cs",
+              "RelativeDocumentMoniker": "EHL.DB\\Implements\\LandingPageDB.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\Implements\\LandingPageDB.cs",
+              "RelativeToolTip": "EHL.DB\\Implements\\LandingPageDB.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAUwGkAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T12:30:54.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OriginRestrictionMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Helpers\\OriginRestrictionMiddleware.cs",
+              "RelativeDocumentMoniker": "EHL.Api\\Helpers\\OriginRestrictionMiddleware.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Helpers\\OriginRestrictionMiddleware.cs",
+              "RelativeToolTip": "EHL.Api\\Helpers\\OriginRestrictionMiddleware.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAYwDEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T11:19:44.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LandingPageController.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\LandingPageController.cs",
+              "RelativeDocumentMoniker": "EHL.Api\\Controllers\\LandingPageController.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\LandingPageController.cs",
+              "RelativeToolTip": "EHL.Api\\Controllers\\LandingPageController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAkwFIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T12:07:13.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EmerDB.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\Implements\\EmerDB.cs",
+              "RelativeDocumentMoniker": "EHL.DB\\Implements\\EmerDB.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\Implements\\EmerDB.cs",
+              "RelativeToolTip": "EHL.DB\\Implements\\EmerDB.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAYwDcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T09:31:36.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "EHL.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "EHL.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAUwGIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T09:15:11.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EmerController.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\EmerController.cs",
+              "RelativeDocumentMoniker": "EHL.Api\\Controllers\\EmerController.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\EmerController.cs",
+              "RelativeToolTip": "EHL.Api\\Controllers\\EmerController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowCcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T11:14:10.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ILandingPageManager.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Business\\Interfaces\\ILandingPageManager.cs",
+              "RelativeDocumentMoniker": "EHL.Business\\Interfaces\\ILandingPageManager.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Business\\Interfaces\\ILandingPageManager.cs",
+              "RelativeToolTip": "EHL.Business\\Interfaces\\ILandingPageManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T12:08:53.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LandingPageManager.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Business\\Implements\\LandingPageManager.cs",
+              "RelativeDocumentMoniker": "EHL.Business\\Implements\\LandingPageManager.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Business\\Implements\\LandingPageManager.cs",
+              "RelativeToolTip": "EHL.Business\\Implements\\LandingPageManager.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAQwGIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T12:09:37.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TechnicalAoAiController.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\TechnicalAoAiController.cs",
+              "RelativeDocumentMoniker": "EHL.Api\\Controllers\\TechnicalAoAiController.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\TechnicalAoAiController.cs",
+              "RelativeToolTip": "EHL.Api\\Controllers\\TechnicalAoAiController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T09:15:30.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PolicyController.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\PolicyController.cs",
+              "RelativeDocumentMoniker": "EHL.Api\\Controllers\\PolicyController.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\PolicyController.cs",
+              "RelativeToolTip": "EHL.Api\\Controllers\\PolicyController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowE0AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T11:31:05.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FileController.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\FileController.cs",
+              "RelativeDocumentMoniker": "EHL.Api\\Controllers\\FileController.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Controllers\\FileController.cs",
+              "RelativeToolTip": "EHL.Api\\Controllers\\FileController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowD4AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T11:54:53.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Enum.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\Enum\\Enum.cs",
+              "RelativeDocumentMoniker": "EHL.Common\\Enum\\Enum.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\Enum\\Enum.cs",
+              "RelativeToolTip": "EHL.Common\\Enum\\Enum.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAqwDkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T11:55:13.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IEmerDB.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\Interfaces\\IEmerDB.cs",
+              "RelativeDocumentMoniker": "EHL.DB\\Interfaces\\IEmerDB.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\Interfaces\\IEmerDB.cs",
+              "RelativeToolTip": "EHL.DB\\Interfaces\\IEmerDB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T09:31:49.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Program.cs",
+              "RelativeDocumentMoniker": "EHL.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Program.cs",
+              "RelativeToolTip": "EHL.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T11:32:51.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "EHL.Api\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\appsettings.Development.json",
+              "RelativeToolTip": "EHL.Api\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-10T11:16:22.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "EHL.Api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "EHL.Api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-10T11:15:31.806Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

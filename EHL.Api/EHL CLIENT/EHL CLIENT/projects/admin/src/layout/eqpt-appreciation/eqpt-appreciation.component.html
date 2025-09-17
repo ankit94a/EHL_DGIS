@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-md-10">Eqpt Appreciation</div>
+      <div class="col-md-2" align="end">
+        @if (userType == '1') {
+          <button class="btn btn-danger" (click)="openDailog()">+ Add Eqpt Appreciation</button>
+        }
+      </div>
+    </div>
+    @if (!isOfficerLoggedIn) {
+      <div class="pdf-container">
+        <lib-ecr-token (isVarified)="isVarified($event)"></lib-ecr-token>
+      </div>
+    }
+    @if (ispl.length > 0 && isOfficerLoggedIn) {
+      <app-table [rowData]="ispl" [tablePaginationSettings]="tablePaginationSettings"
+        [enableCheckbox]="true" [isRowBackgroundColor]="true" [isRefresh]="isRefresh" [allowMultiSelect]="true"
+        [sqColumnDefinition]="columns" (edit)="edit($event)" (delete)="delete($event)" (getFileId)="getFileId($event)" [tableMaxHeight]="'80vh'"
+        >
+      </app-table>
+    }
+  </mat-card-content>
+</mat-card>

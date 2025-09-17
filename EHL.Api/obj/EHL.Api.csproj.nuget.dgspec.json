@@ -1,0 +1,384 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\EHL.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\EHL.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\EHL.Api.csproj",
+        "projectName": "EHL.Api",
+        "projectPath": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\EHL.Api.csproj",
+        "packagesPath": "C:\\Users\\ankit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\NuGet.Config",
+          "C:\\Users\\ankit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0-windows"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0-windows7.0": {
+            "targetAlias": "net9.0-windows",
+            "projectReferences": {
+              "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Business\\EHL.Business.csproj": {
+                "projectPath": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Business\\EHL.Business.csproj"
+              },
+              "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\EHL.Common.csproj": {
+                "projectPath": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\EHL.Common.csproj"
+              },
+              "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\EHL.DB.csproj": {
+                "projectPath": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\EHL.DB.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
+          "dependencies": {
+            "BouncyCastle.NetCore": {
+              "target": "Package",
+              "version": "[2.2.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Pkcs11Interop": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "itext7.bouncy-castle-adapter": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Business\\EHL.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Business\\EHL.Business.csproj",
+        "projectName": "EHL.Business",
+        "projectPath": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Business\\EHL.Business.csproj",
+        "packagesPath": "C:\\Users\\ankit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\NuGet.Config",
+          "C:\\Users\\ankit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\EHL.Common.csproj": {
+                "projectPath": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\EHL.Common.csproj"
+              },
+              "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\EHL.DB.csproj": {
+                "projectPath": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\EHL.DB.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\EHL.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\EHL.Common.csproj",
+        "projectName": "EHL.Common",
+        "projectPath": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\EHL.Common.csproj",
+        "packagesPath": "C:\\Users\\ankit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\NuGet.Config",
+          "C:\\Users\\ankit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\EHL.DB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\EHL.DB.csproj",
+        "projectName": "EHL.DB",
+        "projectPath": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\EHL.DB.csproj",
+        "packagesPath": "C:\\Users\\ankit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.DB\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\NuGet.Config",
+          "C:\\Users\\ankit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\EHL.Common.csproj": {
+                "projectPath": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Common\\EHL.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.66, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

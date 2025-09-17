@@ -1,0 +1,42 @@
+<mat-card>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-md-10">Contract List</div>
+      <div class="col-md-2" align="end">
+        @if (userType == '1') {
+          <button class="btn btn-danger" (click)="openDailog()">+ Add EpContract</button>
+        }
+      </div>
+    </div>
+    <!-- @if (!isOfficerLoggedIn) {
+      <div class="pdf-container">
+        <lib-ecr-token (isVarified)="isVarified($event)"></lib-ecr-token>
+      </div>
+    } -->
+    @if (isOfficerLoggedIn) {
+      <div class="row">
+        <div class="col-md-4">
+          <mat-form-field appearance="fill">
+            <mat-label>Contract Type</mat-label>
+            <mat-select  panelClass="custom-dropdown" placeholder="Contract Type" (selectionChange)="filterPolicy($event.value)">
+              <mat-option [value]="null">All</mat-option>
+              <mat-option [value]="'Capital'">Capital</mat-option>
+              <mat-option [value]="'Revenue'">Revenue</mat-option>
+              <mat-option [value]="'EP Capital'">EP Capital</mat-option>
+              <mat-option [value]="'EP Revenue'">EP Revenue</mat-option>
+              <mat-option [value]="'OCPP'">OCPP</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    }
+
+    @if (epContractList.length > 0 && isOfficerLoggedIn) {
+      <app-table [rowData]="epContractList" [tablePaginationSettings]="tablePaginationSettings"
+        [enableCheckbox]="true" [isRowBackgroundColor]="true" [isRefresh]="isRefresh" [allowMultiSelect]="true"
+        (edit)="edit($event)" (delete)="delete($event)" [sqColumnDefinition]="columns" (getFileId)="getFileId($event)" [tableMaxHeight]="'80vh'"
+        >
+      </app-table>
+    }
+  </mat-card-content>
+</mat-card>

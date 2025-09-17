@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-title>
+    <div class="row">
+      <div class="col-md-3">EMER Index</div>
+      <div class="col-md-7"></div>
+      <div class="col-md-2" align="end">
+        @if (userType == '1') {
+          <button class="btn btn-danger" (click)="openDialog()">+ Add EMER Index</button>
+        }
+      </div>
+    </div>
+
+  </mat-card-title>
+  <mat-card-content>
+    @if (emerIndexList.length > 0) {
+      <app-table [rowData]="emerIndexList" [tablePaginationSettings]="tablePaginationSettings"
+        [enableCheckbox]="true" [isRowBackgroundColor]="true" [isRefresh]="isRefresh" [allowMultiSelect]="true" [tableMaxHeight]="'850px'"
+        [sqColumnDefinition]="columns" (getFileId)="getFileId($event)" (edit)="edit($event)" (delete)="delete($event)"
+        >
+      </app-table>
+    }
+  </mat-card-content>
+</mat-card>

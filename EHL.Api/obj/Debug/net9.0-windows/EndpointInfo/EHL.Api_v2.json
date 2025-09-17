@@ -1,0 +1,3346 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "EHL",
+    "description": "Indian Army Web API",
+    "version": "v2"
+  },
+  "paths": {
+    "/api/Attribute/wing": {
+      "post": {
+        "tags": [
+          "Attribute"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wing"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wing"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wing"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Attribute"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Attribute/wing/update": {
+      "post": {
+        "tags": [
+          "Attribute"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wing"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wing"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Wing"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Attribute/category": {
+      "post": {
+        "tags": [
+          "Attribute"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Attribute/category/updated": {
+      "post": {
+        "tags": [
+          "Attribute"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Attribute/subcategory": {
+      "post": {
+        "tags": [
+          "Attribute"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubCategory"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubCategory"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubCategory"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Attribute/eqpt": {
+      "post": {
+        "tags": [
+          "Attribute"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Eqpt"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Eqpt"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Eqpt"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Attribute/category{wingId}": {
+      "get": {
+        "tags": [
+          "Attribute"
+        ],
+        "parameters": [
+          {
+            "name": "wingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Attribute/getAllcategory": {
+      "get": {
+        "tags": [
+          "Attribute"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Attribute/subcategory{categoryId}": {
+      "get": {
+        "tags": [
+          "Attribute"
+        ],
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Attribute/eqpt{categoryId}/{subCategoryId}": {
+      "get": {
+        "tags": [
+          "Attribute"
+        ],
+        "parameters": [
+          {
+            "name": "categoryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "subCategoryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Attribute/category/update": {
+      "post": {
+        "tags": [
+          "Attribute"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Attribute/subcategory/update": {
+      "post": {
+        "tags": [
+          "Attribute"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubCategory"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubCategory"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubCategory"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Attribute/eqpt/update": {
+      "post": {
+        "tags": [
+          "Attribute"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Eqpt"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Eqpt"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Eqpt"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Attribute/delete": {
+      "post": {
+        "tags": [
+          "Attribute"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeactivateModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeactivateModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeactivateModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/publickey": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/forget-password": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/logout": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Token",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/generate": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/getTokenDetails": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/validate-pin": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidatePinRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidatePinRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValidatePinRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Emer/wing/{wingId}": {
+      "get": {
+        "tags": [
+          "Emer"
+        ],
+        "parameters": [
+          {
+            "name": "wingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Emer": {
+      "post": {
+        "tags": [
+          "Emer"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "EmerNumber": {
+                    "type": "string"
+                  },
+                  "Subject": {
+                    "type": "string"
+                  },
+                  "SubFunction": {
+                    "type": "string"
+                  },
+                  "SubFunctionCategory": {
+                    "type": "string"
+                  },
+                  "SubFunctionType": {
+                    "type": "string"
+                  },
+                  "CategoryId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "SubCategoryId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "Category": {
+                    "type": "string"
+                  },
+                  "SubCategory": {
+                    "type": "string"
+                  },
+                  "Eqpt": {
+                    "type": "string"
+                  },
+                  "EmerFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Remarks": {
+                    "type": "string"
+                  },
+                  "FileId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "FileBytes": {
+                    "type": "string",
+                    "format": "byte"
+                  },
+                  "FileName": {
+                    "type": "string"
+                  },
+                  "FilePath": {
+                    "type": "string"
+                  },
+                  "FileSize": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "Wing": {
+                    "type": "string"
+                  },
+                  "WingId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "CreatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UpdatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CreatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "UpdatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "IsDeleted": {
+                    "type": "boolean"
+                  },
+                  "IsActive": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "EmerNumber": {
+                  "style": "form"
+                },
+                "Subject": {
+                  "style": "form"
+                },
+                "SubFunction": {
+                  "style": "form"
+                },
+                "SubFunctionCategory": {
+                  "style": "form"
+                },
+                "SubFunctionType": {
+                  "style": "form"
+                },
+                "CategoryId": {
+                  "style": "form"
+                },
+                "SubCategoryId": {
+                  "style": "form"
+                },
+                "Category": {
+                  "style": "form"
+                },
+                "SubCategory": {
+                  "style": "form"
+                },
+                "Eqpt": {
+                  "style": "form"
+                },
+                "EmerFile": {
+                  "style": "form"
+                },
+                "Remarks": {
+                  "style": "form"
+                },
+                "FileId": {
+                  "style": "form"
+                },
+                "FileBytes": {
+                  "style": "form"
+                },
+                "FileName": {
+                  "style": "form"
+                },
+                "FilePath": {
+                  "style": "form"
+                },
+                "FileSize": {
+                  "style": "form"
+                },
+                "Wing": {
+                  "style": "form"
+                },
+                "WingId": {
+                  "style": "form"
+                },
+                "Id": {
+                  "style": "form"
+                },
+                "CreatedBy": {
+                  "style": "form"
+                },
+                "UpdatedBy": {
+                  "style": "form"
+                },
+                "CreatedOn": {
+                  "style": "form"
+                },
+                "UpdatedOn": {
+                  "style": "form"
+                },
+                "IsDeleted": {
+                  "style": "form"
+                },
+                "IsActive": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Emer/update": {
+      "post": {
+        "tags": [
+          "Emer"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "EmerNumber": {
+                    "type": "string"
+                  },
+                  "Subject": {
+                    "type": "string"
+                  },
+                  "SubFunction": {
+                    "type": "string"
+                  },
+                  "SubFunctionCategory": {
+                    "type": "string"
+                  },
+                  "SubFunctionType": {
+                    "type": "string"
+                  },
+                  "CategoryId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "SubCategoryId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "Category": {
+                    "type": "string"
+                  },
+                  "SubCategory": {
+                    "type": "string"
+                  },
+                  "Eqpt": {
+                    "type": "string"
+                  },
+                  "EmerFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Remarks": {
+                    "type": "string"
+                  },
+                  "FileId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "FileBytes": {
+                    "type": "string",
+                    "format": "byte"
+                  },
+                  "FileName": {
+                    "type": "string"
+                  },
+                  "FilePath": {
+                    "type": "string"
+                  },
+                  "FileSize": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "Wing": {
+                    "type": "string"
+                  },
+                  "WingId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "CreatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UpdatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CreatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "UpdatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "IsDeleted": {
+                    "type": "boolean"
+                  },
+                  "IsActive": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "EmerNumber": {
+                  "style": "form"
+                },
+                "Subject": {
+                  "style": "form"
+                },
+                "SubFunction": {
+                  "style": "form"
+                },
+                "SubFunctionCategory": {
+                  "style": "form"
+                },
+                "SubFunctionType": {
+                  "style": "form"
+                },
+                "CategoryId": {
+                  "style": "form"
+                },
+                "SubCategoryId": {
+                  "style": "form"
+                },
+                "Category": {
+                  "style": "form"
+                },
+                "SubCategory": {
+                  "style": "form"
+                },
+                "Eqpt": {
+                  "style": "form"
+                },
+                "EmerFile": {
+                  "style": "form"
+                },
+                "Remarks": {
+                  "style": "form"
+                },
+                "FileId": {
+                  "style": "form"
+                },
+                "FileBytes": {
+                  "style": "form"
+                },
+                "FileName": {
+                  "style": "form"
+                },
+                "FilePath": {
+                  "style": "form"
+                },
+                "FileSize": {
+                  "style": "form"
+                },
+                "Wing": {
+                  "style": "form"
+                },
+                "WingId": {
+                  "style": "form"
+                },
+                "Id": {
+                  "style": "form"
+                },
+                "CreatedBy": {
+                  "style": "form"
+                },
+                "UpdatedBy": {
+                  "style": "form"
+                },
+                "CreatedOn": {
+                  "style": "form"
+                },
+                "UpdatedOn": {
+                  "style": "form"
+                },
+                "IsDeleted": {
+                  "style": "form"
+                },
+                "IsActive": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Emer/index/{wingId}": {
+      "get": {
+        "tags": [
+          "Emer"
+        ],
+        "parameters": [
+          {
+            "name": "wingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Emer/index": {
+      "post": {
+        "tags": [
+          "Emer"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "EmerNumber": {
+                    "type": "string"
+                  },
+                  "Category": {
+                    "type": "string"
+                  },
+                  "Wing": {
+                    "type": "string"
+                  },
+                  "WingId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CategoryId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Subject": {
+                    "type": "string"
+                  },
+                  "FileName": {
+                    "type": "string"
+                  },
+                  "FilePath": {
+                    "type": "string"
+                  },
+                  "EmerFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "FileBytes": {
+                    "type": "string",
+                    "format": "byte"
+                  },
+                  "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "CreatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UpdatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CreatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "UpdatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "IsDeleted": {
+                    "type": "boolean"
+                  },
+                  "IsActive": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "EmerNumber": {
+                  "style": "form"
+                },
+                "Category": {
+                  "style": "form"
+                },
+                "Wing": {
+                  "style": "form"
+                },
+                "WingId": {
+                  "style": "form"
+                },
+                "CategoryId": {
+                  "style": "form"
+                },
+                "Subject": {
+                  "style": "form"
+                },
+                "FileName": {
+                  "style": "form"
+                },
+                "FilePath": {
+                  "style": "form"
+                },
+                "EmerFile": {
+                  "style": "form"
+                },
+                "FileBytes": {
+                  "style": "form"
+                },
+                "Id": {
+                  "style": "form"
+                },
+                "CreatedBy": {
+                  "style": "form"
+                },
+                "UpdatedBy": {
+                  "style": "form"
+                },
+                "CreatedOn": {
+                  "style": "form"
+                },
+                "UpdatedOn": {
+                  "style": "form"
+                },
+                "IsDeleted": {
+                  "style": "form"
+                },
+                "IsActive": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Emer/index/update": {
+      "post": {
+        "tags": [
+          "Emer"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "EmerNumber": {
+                    "type": "string"
+                  },
+                  "Category": {
+                    "type": "string"
+                  },
+                  "Wing": {
+                    "type": "string"
+                  },
+                  "WingId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CategoryId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Subject": {
+                    "type": "string"
+                  },
+                  "FileName": {
+                    "type": "string"
+                  },
+                  "FilePath": {
+                    "type": "string"
+                  },
+                  "EmerFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "FileBytes": {
+                    "type": "string",
+                    "format": "byte"
+                  },
+                  "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "CreatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UpdatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CreatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "UpdatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "IsDeleted": {
+                    "type": "boolean"
+                  },
+                  "IsActive": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "EmerNumber": {
+                  "style": "form"
+                },
+                "Category": {
+                  "style": "form"
+                },
+                "Wing": {
+                  "style": "form"
+                },
+                "WingId": {
+                  "style": "form"
+                },
+                "CategoryId": {
+                  "style": "form"
+                },
+                "Subject": {
+                  "style": "form"
+                },
+                "FileName": {
+                  "style": "form"
+                },
+                "FilePath": {
+                  "style": "form"
+                },
+                "EmerFile": {
+                  "style": "form"
+                },
+                "FileBytes": {
+                  "style": "form"
+                },
+                "Id": {
+                  "style": "form"
+                },
+                "CreatedBy": {
+                  "style": "form"
+                },
+                "UpdatedBy": {
+                  "style": "form"
+                },
+                "CreatedOn": {
+                  "style": "form"
+                },
+                "UpdatedOn": {
+                  "style": "form"
+                },
+                "IsDeleted": {
+                  "style": "form"
+                },
+                "IsActive": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Emer/mastersheet": {
+      "get": {
+        "tags": [
+          "Emer"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Emer/latest/emer": {
+      "get": {
+        "tags": [
+          "Emer"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Emer/latest/policy": {
+      "get": {
+        "tags": [
+          "Emer"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/File/download": {
+      "post": {
+        "tags": [
+          "File"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttachedFile"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttachedFile"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttachedFile"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/File/UploadPdf": {
+      "post": {
+        "tags": [
+          "File"
+        ],
+        "parameters": [
+          {
+            "name": "FileType",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FileStorage",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "byte"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "CreatedBy",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UpdatedBy",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "CreatedOn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "UpdatedOn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "IsDeleted",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "IsActive",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "PdfFile": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "PdfFile": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/File/userip": {
+      "get": {
+        "tags": [
+          "File"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/File/getpdf": {
+      "post": {
+        "tags": [
+          "File"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PdfDocuments"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PdfDocuments"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PdfDocuments"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LandingPage/deativate": {
+      "post": {
+        "tags": [
+          "LandingPage"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeactivateModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeactivateModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeactivateModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LandingPage/drone": {
+      "post": {
+        "tags": [
+          "LandingPage"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "WingId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Wing": {
+                    "type": "string"
+                  },
+                  "NomenClature": {
+                    "type": "string"
+                  },
+                  "DroneIcscFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Remarks": {
+                    "type": "string"
+                  },
+                  "FileId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "FileBytes": {
+                    "type": "string",
+                    "format": "byte"
+                  },
+                  "FileName": {
+                    "type": "string"
+                  },
+                  "FilePath": {
+                    "type": "string"
+                  },
+                  "FileSize": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "Type": {
+                    "type": "string"
+                  },
+                  "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "CreatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UpdatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CreatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "UpdatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "IsDeleted": {
+                    "type": "boolean"
+                  },
+                  "IsActive": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "WingId": {
+                  "style": "form"
+                },
+                "Wing": {
+                  "style": "form"
+                },
+                "NomenClature": {
+                  "style": "form"
+                },
+                "DroneIcscFile": {
+                  "style": "form"
+                },
+                "Remarks": {
+                  "style": "form"
+                },
+                "FileId": {
+                  "style": "form"
+                },
+                "FileBytes": {
+                  "style": "form"
+                },
+                "FileName": {
+                  "style": "form"
+                },
+                "FilePath": {
+                  "style": "form"
+                },
+                "FileSize": {
+                  "style": "form"
+                },
+                "Type": {
+                  "style": "form"
+                },
+                "Id": {
+                  "style": "form"
+                },
+                "CreatedBy": {
+                  "style": "form"
+                },
+                "UpdatedBy": {
+                  "style": "form"
+                },
+                "CreatedOn": {
+                  "style": "form"
+                },
+                "UpdatedOn": {
+                  "style": "form"
+                },
+                "IsDeleted": {
+                  "style": "form"
+                },
+                "IsActive": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LandingPage/drone/update": {
+      "post": {
+        "tags": [
+          "LandingPage"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "WingId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Wing": {
+                    "type": "string"
+                  },
+                  "NomenClature": {
+                    "type": "string"
+                  },
+                  "DroneIcscFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Remarks": {
+                    "type": "string"
+                  },
+                  "FileId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "FileBytes": {
+                    "type": "string",
+                    "format": "byte"
+                  },
+                  "FileName": {
+                    "type": "string"
+                  },
+                  "FilePath": {
+                    "type": "string"
+                  },
+                  "FileSize": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "Type": {
+                    "type": "string"
+                  },
+                  "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "CreatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UpdatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CreatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "UpdatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "IsDeleted": {
+                    "type": "boolean"
+                  },
+                  "IsActive": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "WingId": {
+                  "style": "form"
+                },
+                "Wing": {
+                  "style": "form"
+                },
+                "NomenClature": {
+                  "style": "form"
+                },
+                "DroneIcscFile": {
+                  "style": "form"
+                },
+                "Remarks": {
+                  "style": "form"
+                },
+                "FileId": {
+                  "style": "form"
+                },
+                "FileBytes": {
+                  "style": "form"
+                },
+                "FileName": {
+                  "style": "form"
+                },
+                "FilePath": {
+                  "style": "form"
+                },
+                "FileSize": {
+                  "style": "form"
+                },
+                "Type": {
+                  "style": "form"
+                },
+                "Id": {
+                  "style": "form"
+                },
+                "CreatedBy": {
+                  "style": "form"
+                },
+                "UpdatedBy": {
+                  "style": "form"
+                },
+                "CreatedOn": {
+                  "style": "form"
+                },
+                "UpdatedOn": {
+                  "style": "form"
+                },
+                "IsDeleted": {
+                  "style": "form"
+                },
+                "IsActive": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LandingPage/type": {
+      "post": {
+        "tags": [
+          "LandingPage"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DroneIcsc"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DroneIcsc"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DroneIcsc"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/LandingPage/feedback": {
+      "post": {
+        "tags": [
+          "LandingPage"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Feedback"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Feedback"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Feedback"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "LandingPage"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Policy": {
+      "post": {
+        "tags": [
+          "Policy"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Type": {
+                    "type": "string"
+                  },
+                  "ContractType": {
+                    "type": "string"
+                  },
+                  "Wing": {
+                    "type": "string"
+                  },
+                  "Category": {
+                    "type": "string"
+                  },
+                  "WingId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "CategoryId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "subCategoryId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "subCategory": {
+                    "type": "string"
+                  },
+                  "eqpt": {
+                    "type": "string"
+                  },
+                  "Remarks": {
+                    "type": "string"
+                  },
+                  "FileName": {
+                    "type": "string"
+                  },
+                  "FilePath": {
+                    "type": "string"
+                  },
+                  "FileSize": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "FileBytes": {
+                    "type": "string",
+                    "format": "byte"
+                  },
+                  "PolicyFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "CreatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UpdatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CreatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "UpdatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "IsDeleted": {
+                    "type": "boolean"
+                  },
+                  "IsActive": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "Type": {
+                  "style": "form"
+                },
+                "ContractType": {
+                  "style": "form"
+                },
+                "Wing": {
+                  "style": "form"
+                },
+                "Category": {
+                  "style": "form"
+                },
+                "WingId": {
+                  "style": "form"
+                },
+                "CategoryId": {
+                  "style": "form"
+                },
+                "subCategoryId": {
+                  "style": "form"
+                },
+                "subCategory": {
+                  "style": "form"
+                },
+                "eqpt": {
+                  "style": "form"
+                },
+                "Remarks": {
+                  "style": "form"
+                },
+                "FileName": {
+                  "style": "form"
+                },
+                "FilePath": {
+                  "style": "form"
+                },
+                "FileSize": {
+                  "style": "form"
+                },
+                "FileBytes": {
+                  "style": "form"
+                },
+                "PolicyFile": {
+                  "style": "form"
+                },
+                "Id": {
+                  "style": "form"
+                },
+                "CreatedBy": {
+                  "style": "form"
+                },
+                "UpdatedBy": {
+                  "style": "form"
+                },
+                "CreatedOn": {
+                  "style": "form"
+                },
+                "UpdatedOn": {
+                  "style": "form"
+                },
+                "IsDeleted": {
+                  "style": "form"
+                },
+                "IsActive": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Policy/update": {
+      "post": {
+        "tags": [
+          "Policy"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Type": {
+                    "type": "string"
+                  },
+                  "ContractType": {
+                    "type": "string"
+                  },
+                  "Wing": {
+                    "type": "string"
+                  },
+                  "Category": {
+                    "type": "string"
+                  },
+                  "WingId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "CategoryId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "subCategoryId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "subCategory": {
+                    "type": "string"
+                  },
+                  "eqpt": {
+                    "type": "string"
+                  },
+                  "Remarks": {
+                    "type": "string"
+                  },
+                  "FileName": {
+                    "type": "string"
+                  },
+                  "FilePath": {
+                    "type": "string"
+                  },
+                  "FileSize": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "FileBytes": {
+                    "type": "string",
+                    "format": "byte"
+                  },
+                  "PolicyFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "CreatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UpdatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CreatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "UpdatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "IsDeleted": {
+                    "type": "boolean"
+                  },
+                  "IsActive": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "Type": {
+                  "style": "form"
+                },
+                "ContractType": {
+                  "style": "form"
+                },
+                "Wing": {
+                  "style": "form"
+                },
+                "Category": {
+                  "style": "form"
+                },
+                "WingId": {
+                  "style": "form"
+                },
+                "CategoryId": {
+                  "style": "form"
+                },
+                "subCategoryId": {
+                  "style": "form"
+                },
+                "subCategory": {
+                  "style": "form"
+                },
+                "eqpt": {
+                  "style": "form"
+                },
+                "Remarks": {
+                  "style": "form"
+                },
+                "FileName": {
+                  "style": "form"
+                },
+                "FilePath": {
+                  "style": "form"
+                },
+                "FileSize": {
+                  "style": "form"
+                },
+                "FileBytes": {
+                  "style": "form"
+                },
+                "PolicyFile": {
+                  "style": "form"
+                },
+                "Id": {
+                  "style": "form"
+                },
+                "CreatedBy": {
+                  "style": "form"
+                },
+                "UpdatedBy": {
+                  "style": "form"
+                },
+                "CreatedOn": {
+                  "style": "form"
+                },
+                "UpdatedOn": {
+                  "style": "form"
+                },
+                "IsDeleted": {
+                  "style": "form"
+                },
+                "IsActive": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Policy/wing/{wingId}": {
+      "get": {
+        "tags": [
+          "Policy"
+        ],
+        "parameters": [
+          {
+            "name": "wingId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Policy/type": {
+      "post": {
+        "tags": [
+          "Policy"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Policy"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Policy"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Policy"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Policy/policies": {
+      "get": {
+        "tags": [
+          "Policy"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/RoleOfMag": {
+      "get": {
+        "tags": [
+          "RoleOfMag"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "RoleOfMag"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleOfMag"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleOfMag"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleOfMag"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Status": {
+      "get": {
+        "tags": [
+          "Status"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Status/roletype": {
+      "post": {
+        "tags": [
+          "Status"
+        ],
+        "parameters": [
+          {
+            "name": "UserName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Token",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TechnicalAoAi": {
+      "post": {
+        "tags": [
+          "TechnicalAoAi"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Subject": {
+                    "type": "string"
+                  },
+                  "Type": {
+                    "type": "string"
+                  },
+                  "Reference": {
+                    "type": "string"
+                  },
+                  "FileName": {
+                    "type": "string"
+                  },
+                  "TechnicalAoAiFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "FilePath": {
+                    "type": "string"
+                  },
+                  "FileId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "FileBytes": {
+                    "type": "string",
+                    "format": "byte"
+                  },
+                  "FileSize": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "CreatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UpdatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CreatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "UpdatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "IsDeleted": {
+                    "type": "boolean"
+                  },
+                  "IsActive": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "Subject": {
+                  "style": "form"
+                },
+                "Type": {
+                  "style": "form"
+                },
+                "Reference": {
+                  "style": "form"
+                },
+                "FileName": {
+                  "style": "form"
+                },
+                "TechnicalAoAiFile": {
+                  "style": "form"
+                },
+                "FilePath": {
+                  "style": "form"
+                },
+                "FileId": {
+                  "style": "form"
+                },
+                "FileBytes": {
+                  "style": "form"
+                },
+                "FileSize": {
+                  "style": "form"
+                },
+                "Id": {
+                  "style": "form"
+                },
+                "CreatedBy": {
+                  "style": "form"
+                },
+                "UpdatedBy": {
+                  "style": "form"
+                },
+                "CreatedOn": {
+                  "style": "form"
+                },
+                "UpdatedOn": {
+                  "style": "form"
+                },
+                "IsDeleted": {
+                  "style": "form"
+                },
+                "IsActive": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "TechnicalAoAi"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TechnicalAoAi/update": {
+      "post": {
+        "tags": [
+          "TechnicalAoAi"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Subject": {
+                    "type": "string"
+                  },
+                  "Type": {
+                    "type": "string"
+                  },
+                  "Reference": {
+                    "type": "string"
+                  },
+                  "FileName": {
+                    "type": "string"
+                  },
+                  "TechnicalAoAiFile": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "FilePath": {
+                    "type": "string"
+                  },
+                  "FileId": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "FileBytes": {
+                    "type": "string",
+                    "format": "byte"
+                  },
+                  "FileSize": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "CreatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UpdatedBy": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CreatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "UpdatedOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "IsDeleted": {
+                    "type": "boolean"
+                  },
+                  "IsActive": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "encoding": {
+                "Subject": {
+                  "style": "form"
+                },
+                "Type": {
+                  "style": "form"
+                },
+                "Reference": {
+                  "style": "form"
+                },
+                "FileName": {
+                  "style": "form"
+                },
+                "TechnicalAoAiFile": {
+                  "style": "form"
+                },
+                "FilePath": {
+                  "style": "form"
+                },
+                "FileId": {
+                  "style": "form"
+                },
+                "FileBytes": {
+                  "style": "form"
+                },
+                "FileSize": {
+                  "style": "form"
+                },
+                "Id": {
+                  "style": "form"
+                },
+                "CreatedBy": {
+                  "style": "form"
+                },
+                "UpdatedBy": {
+                  "style": "form"
+                },
+                "CreatedOn": {
+                  "style": "form"
+                },
+                "UpdatedOn": {
+                  "style": "form"
+                },
+                "IsDeleted": {
+                  "style": "form"
+                },
+                "IsActive": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AttachedFile": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "emerFile": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
+          },
+          "fileId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "document": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fileType": {
+            "$ref": "#/components/schemas/DownloadFileType"
+          },
+          "filePath": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Category": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "wingId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeactivateModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "tableName": {
+            "type": "string",
+            "nullable": true
+          },
+          "emerNumber": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DownloadFileType": {
+        "enum": [
+          "Emer",
+          "Policy",
+          "Index",
+          "TechnicalAoAI",
+          "DroneInduction"
+        ],
+        "type": "string"
+      },
+      "DroneIcsc": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "wingId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "wing": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomenClature": {
+            "type": "string",
+            "nullable": true
+          },
+          "droneIcscFile": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fileBytes": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "filePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileSize": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Eqpt": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "wingId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "subCategoryId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Feedback": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "rank": {
+            "type": "string",
+            "nullable": true
+          },
+          "unit": {
+            "type": "string",
+            "nullable": true
+          },
+          "number": {
+            "type": "string",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Login": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PdfDocuments": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "fileType": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileStorage": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "pdfFile": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Policy": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "contractType": {
+            "type": "string",
+            "nullable": true
+          },
+          "wing": {
+            "type": "string",
+            "nullable": true
+          },
+          "category": {
+            "type": "string",
+            "nullable": true
+          },
+          "wingId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "subCategoryId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "subCategory": {
+            "type": "string",
+            "nullable": true
+          },
+          "eqpt": {
+            "type": "string",
+            "nullable": true
+          },
+          "remarks": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "filePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileSize": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fileBytes": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          },
+          "policyFile": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RoleOfMag": {
+        "required": [
+          "name",
+          "nameOfOfficer"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "name": {
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9\\s,.-]{1,}",
+            "type": "string"
+          },
+          "wing": {
+            "type": "string",
+            "nullable": true
+          },
+          "wingId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nameOfOfficer": {
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9\\s,.-]{1,}",
+            "type": "string"
+          },
+          "appointment": {
+            "type": "string",
+            "nullable": true
+          },
+          "militaryNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "mobile": {
+            "type": "string",
+            "nullable": true
+          },
+          "civilNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "eqptDealing": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SubCategory": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "wingId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ValidatePinRequest": {
+        "type": "object",
+        "properties": {
+          "pin": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Wing": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "createdBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "updatedBy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedOn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Input the JWT like: Bearer {your token}",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

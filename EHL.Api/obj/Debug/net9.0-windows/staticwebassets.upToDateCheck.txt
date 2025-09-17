@@ -1,0 +1,3 @@
+wwwroot\droneandicsc\sample-local-pdf.pdf
+wwwroot\droneandicsc\sector.pdf
+wwwroot\item\sample-local-pdf.pdf

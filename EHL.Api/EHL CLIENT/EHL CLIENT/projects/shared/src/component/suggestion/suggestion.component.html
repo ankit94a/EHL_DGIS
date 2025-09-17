@@ -1,0 +1,83 @@
+<form [formGroup]="form" class="container">
+  <div class="row">
+    <div class="col-md-10">
+      <div class="heading">
+        <h4>Suggestion and Feedback</h4>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="chat">
+        <button type="button" (click)="close()">
+          <img src="/close.png" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 1 -->
+  <div *ngIf="step === 1" class="step-box">
+    <label>Your Name</label>
+    <input type="text" formControlName="name" placeholder="Enter your name" (keydown.enter)="nextStep()"/>
+    <div class="error" *ngIf="form.get('name')?.touched && form.get('name')?.invalid">
+      Name is required
+    </div>
+    <div align="end">
+    <button type="button" class="btn-next" (click)="nextStep()">Next</button>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div *ngIf="step === 2" class="step-box">
+    <label>Your Rank</label>
+    <input type="text" formControlName="rank" placeholder="Enter your rank" (keydown.enter)="nextStep()"/>
+    <div class="error" *ngIf="form.get('rank')?.touched && form.get('rank')?.invalid">
+      Rank is required
+    </div>
+    <div class="d-flex justify-content-between mt-3">
+  <button type="button" class="btn btn-secondary" (click)="prevStep()">Back</button>
+  <button type="button" class="btn btn-primary" (click)="nextStep()">Next</button>
+</div>
+
+  </div>
+
+  <!-- Step 3 -->
+  <div *ngIf="step === 3" class="step-box">
+    <label>Unit</label>
+    <input type="text" formControlName="unit" placeholder="Enter your unit" (keydown.enter)="nextStep()"/>
+    <div class="error" *ngIf="form.get('unit')?.touched && form.get('unit')?.invalid">
+      Unit is required
+    </div>
+  <div class="d-flex justify-content-between mt-3">
+  <button type="button" class="btn btn-secondary" (click)="prevStep()">Back</button>
+  <button type="button" class="btn btn-primary" (click)="nextStep()">Next</button>
+</div>
+  </div>
+
+  <!-- Step 4 -->
+  <div *ngIf="step === 4" class="step-box">
+    <label>Army Number</label>
+    <input type="text" formControlName="number" placeholder="Enter your army number" (keydown.enter)="nextStep()"/>
+    <div class="error" *ngIf="form.get('number')?.touched && form.get('number')?.invalid">
+       Army number is required
+    </div>
+  <div class="d-flex justify-content-between mt-3">
+  <button type="button" class="btn btn-secondary" (click)="prevStep()">Back</button>
+  <button type="button" class="btn btn-primary" (click)="nextStep()">Next</button>
+</div>
+  </div>
+
+  <!-- Step 5 -->
+  <div *ngIf="step === 5" class="row">
+    <div class="col-md-10">
+      <div class="input-wrapper">
+        <textarea placeholder="Type a message" formControlName="message" class="message" (keydown.enter)="sendMessage()"></textarea>
+        <div class="error" *ngIf="form.get('message')?.touched && form.get('message')?.invalid">
+          Message is required
+        </div>
+        <button type="button" (click)="sendMessage()" class="btn-send">
+          <img src="/arrow (2).png" alt="Send Icon" class="arrow">
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

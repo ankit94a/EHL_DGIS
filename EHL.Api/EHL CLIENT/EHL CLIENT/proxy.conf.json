@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://10.0.0.80:8081",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

@@ -1,0 +1,136 @@
+<section class="example-container mat-elevation-z8" tabindex="0" style="overflow: auto;" style="width: auto;" [style.max-height]="tableMaxHeight">
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    @for (column of sqColumnDefinition; track column) {
+      <ng-container matColumnDef="{{column.name}}" sticky="true">
+        @if (column.name ==='select') {
+          <mat-header-cell class="zipper-checkbox" *matHeaderCellDef>
+            <mat-checkbox (change)="$event ? masterToggle() : null"
+              [checked]="selection.hasValue() && isAllSelected()"
+              [indeterminate]="selection.hasValue() && !isAllSelected()">
+            </mat-checkbox>
+          </mat-header-cell>
+          <mat-cell class="zipper-checkbox" *matCellDef="let row">
+            <mat-checkbox (click)="$event.stopPropagation()"
+              (change)="$event ? selection.toggle(row) : null; rowSelect()"
+              [checked]="selection.isSelected(row)">
+            </mat-checkbox>
+          </mat-cell>
+        } @else {
+          <mat-header-cell *matHeaderCellDef >
+            <div class="column-header-content zipper-width">
+              <span> {{column.displayName}}</span>
+              @if (isSearchEnabled(column)) {
+                <div
+                  (click)="$event.stopPropagation()">
+                  @switch (column.type) {
+                    @case ('number') {
+                      <div>
+                        <mat-form-field>
+                          <input matInput type="number" value=""
+                            (keyup)="applyInsyncFilter($event.target,column.name,column.type)" />
+                          </mat-form-field>
+                        </div>
+                      }
+                      @case ('date') {
+                        <div>
+                          <mat-form-field>
+                            <input #filterName name="filterName" matInput [matDatepicker]="startDate"
+                              placeholder="Select date"
+                              (dateChange)="applyInsyncFilter($event.target.value,column.name,column.type)">
+                              <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+                              <mat-datepicker #startDate></mat-datepicker>
+                            </mat-form-field>
+                          </div>
+                        }
+                        @default {
+                          <div>
+                            <mat-form-field class="example-form-field">
+                              <input matInput type="text" placeholder="Search"
+                                (keyup)="applyInsyncFilter($event.target,column.name,column.type)">
+                              </mat-form-field>
+                            </div>
+                          }
+                        }
+                      </div>
+                    }
+                  </div>
+                </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                  <div>
+                    @switch (column.valueType) {
+                      @case ('link') {
+                        <a class="btn-link" (click)="sendFileRow(element)">{{getValues(element,column) }}</a>
+                      }
+                      @case ('html') {
+                        <div [innerHtml]="getValues(element,column)"></div>
+                      }
+                      @default {
+                        <div >{{getValues(element,column) }}</div>
+                      }
+                    }
+                  </div>
+                </mat-cell>
+              }
+            </ng-container>
+          }
+          @if (tablePaginationSettings.enableAction) {
+            <ng-container matColumnDef="action">
+              <mat-header-cell *matHeaderCellDef style="margin-top:-1%;">
+                <div class="column-header-content">
+                  @if (tablePaginationSettings.enableColumn) {
+                    <button class="btn btn-link" type="button" matTooltip="filter"
+                      #menuTrigger="matMenuTrigger"
+                      [matMenuTriggerFor]="mainMenuButton"> <img src="filter.svg" alt="filter" width="25px"></button>
+                    } @else {
+                      Action
+                    }
+                    <br>
+                      <mat-menu #mainMenuButton="matMenu">
+                        @for (menuColumn of sqColumnDefinition; track menuColumn; let i = $index) {
+                          <span (click)="$event.stopPropagation()"
+                            >
+                            @if (menuColumn.displayName!='') {
+                              <span><mat-slide-toggle color="primary"
+                                style="margin:3px" [checked]="!menuColumn.hide"
+                                (change)="toggleColumn($event,menuColumn)">
+                              </mat-slide-toggle>
+                              {{menuColumn.displayName}}
+                              <br></span>
+                            }
+                          </span>
+                        }
+                      </mat-menu>
+                      @if (sqColumnDefinition[0].isSearchEnabled) {
+                        <button type="button" class="btn table-reset-btn btn-outline-danger btn-sm"
+                        (click)="resetFilters()">Reset</button>
+                      }
+                    </div>
+                  </mat-header-cell>
+                  <mat-cell *matCellDef="let element;let i = index;">
+                    @if (element!=null && tablePaginationSettings.enableEdit) {
+                      <button mat-icon-button color="accent"
+                        type="button" (click)="editObj(element)" matTooltip="edit"><img src="edit.svg" width="30px" alt="edit"></button>
+                      }
+                      @if (element!=null && tablePaginationSettings.enableDelete) {
+                        <button mat-icon-button color="warn"
+                          type="button" (click)="deleteObj(i,element)" matTooltip="delete">
+                          <img src="delete.svg" alt="delete" width="35px">
+                        </button>
+                      }
+                    </mat-cell>
+                  </ng-container>
+                }
+
+                <mat-header-row *matHeaderRowDef="getVisibleColumns(); sticky: true"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: getVisibleColumns();"
+                  [ngClass]="{'highlight': selectedRowIndex == row.position}"
+                  (click)="enableCheckbox==false && allowMultiSelect==false ? highlight(row) : false ;">
+                </mat-row>
+              </mat-table>
+              <ng-container>
+                <mat-paginator class="mat-paginator-sticky" [pageSize]="tablePaginationSettings.pageSize"
+                  [pageSizeOptions]="tablePaginationSettings.pageSizeOptions" (page)="getChangedPageValue($event)"
+                  [showFirstLastButtons]="tablePaginationSettings.showFirstLastButtons">
+                </mat-paginator>
+              </ng-container>
+            </section>

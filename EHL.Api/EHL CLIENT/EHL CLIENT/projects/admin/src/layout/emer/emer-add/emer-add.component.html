@@ -1,0 +1,306 @@
+<h4 mat-dialog-title>Add EMER</h4>
+<form [formGroup]="emerForm" (ngSubmit)="save()">
+  <mat-dialog-content>
+    <div class="row">
+      <div class="col-md-4">
+        <mat-form-field>
+          <mat-label>EMERNumber</mat-label>
+          <input formControlName="emerNumber" appAlphanumericOnly type="text" matInput placeholder="EMERNumber"
+            required />
+            @if (emerForm.get('emerNumber')?.touched && emerForm.get('emerNumber')?.invalid) {
+              <mat-error>
+                EMER number is required
+              </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Subject</mat-label>
+            <input formControlName="subject" appAlphanumericOnly type="text" matInput placeholder="Subject" required />
+            @if (emerForm.get('subject')?.touched && emerForm.get('subject')?.invalid) {
+              <mat-error>
+                Subject is required
+              </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field appearance="fill">
+            <mat-label>SubFunction</mat-label>
+            <mat-select formControlName="subFunction" panelClass="custom-dropdown" placeholder="SubFunction"
+              (selectionChange)="getSubFunctionField($event.value)">
+              <mat-option [value]="'DATA SUMMARY'">DATA SUMMARY</mat-option>
+              <mat-option [value]="'INSTRUCTIONS TO USER MAINTENANCE'">INSTRUCTIONS TO USER MAINTENANCE</mat-option>
+              <mat-option [value]="'TECHNICAL DESCRIPTION'">TECHNICAL DESCRIPTION</mat-option>
+              <mat-option [value]="'LIGHT REPAIRS'">LIGHT REPAIRS</mat-option>
+              <mat-option [value]="'FIELD AND BASE REPAIRS'">FIELD AND BASE REPAIRS</mat-option>
+              <mat-option [value]="'SCALES'">SCALES</mat-option>
+              <mat-option [value]="'PERMISSIBLE REPAIR SCHEDULE'">PERMISSIBLE REPAIR SCHEDULE</mat-option>
+              <mat-option [value]="'MODIFICATION INSTRUCTIONS'">MODIFICATION INSTRUCTIONS</mat-option>
+              <mat-option [value]="'INSPECTION STD AND CONDEMNATION LIMITS'">INSPECTION STD AND CONDEMNATION LIMITS</mat-option>
+              <mat-option [value]="'MISCELLANEOUS INSTRUCTIONS'">MISCELLANEOUS INSTRUCTIONS</mat-option>
+            </mat-select>
+            @if (emerForm.get('subFunction')?.touched && emerForm.get('subFunction')?.hasError('required')) {
+              <mat-error>
+                Sub Function is required
+              </mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        @if (SubFunctionType.length > 0) {
+          @if (subNarrowFunctionDropdown.length > 0) {
+            <div class="col-md-4">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Sub Function Category</mat-label>
+                <mat-select formControlName="subFunctionCategory" (selectionChange)="getSubFunctionType($event.value)">
+                  @for (sb of subNarrowFunctionDropdown; track sb) {
+                    <mat-option [value]="sb">{{ sb }}</mat-option>
+                  }
+                </mat-select>
+                @if (emerForm.get('subFunctionCategory')?.touched && emerForm.get('subFunctionCategory')?.hasError('required')) {
+                  <mat-error
+                    >
+                    Sub Function Category is required
+                  </mat-error>
+                }
+              </mat-form-field>
+            </div>
+          }
+          <div class="col-md-4">
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>Sub Function Type</mat-label>
+              <mat-select formControlName="subFunctionType">
+                @for (type of SubFunctionType; track type) {
+                  <mat-option [value]="type">{{ type }}</mat-option>
+                }
+              </mat-select>
+              @if (emerForm.get('subFunctionType')?.touched && emerForm.get('subFunctionType')?.hasError('required')) {
+                <mat-error
+                  >
+                  Sub Function Type is required
+                </mat-error>
+              }
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>Wing</mat-label>
+              <mat-select formControlName="wingId" (selectionChange)="getCategory($event.value)">
+                @for (wingItem of wing; track wingItem) {
+                  <mat-option [value]="wingItem.id">{{ wingItem.name }}</mat-option>
+                }
+              </mat-select>
+            </mat-form-field>
+          </div>
+        } @else {
+          @if (subNarrowFunctionDropdown.length > 0) {
+            <div class="col-md-4">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Sub Function Category</mat-label>
+                <mat-select formControlName="subFunctionCategory" (selectionChange)="getSubFunctionType($event.value)">
+                  @for (sb of subNarrowFunctionDropdown; track sb) {
+                    <mat-option [value]="sb">{{ sb }}</mat-option>
+                  }
+                </mat-select>
+                @if (emerForm.get('subFunctionCategory')?.touched && emerForm.get('subFunctionCategory')?.hasError('required')) {
+                  <mat-error
+                    >
+                    Sub Function Category is required
+                  </mat-error>
+                }
+              </mat-form-field>
+            </div>
+
+            <div class="col-md-4">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Wing</mat-label>
+                <mat-select formControlName="wingId" (selectionChange)="getCategory($event.value)">
+                  @for (wingItem of wing; track wingItem) {
+                    <mat-option [value]="wingItem.id">{{ wingItem.name }}</mat-option>
+                  }
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div class="col-md-4">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Category</mat-label>
+                <mat-select formControlName="categoryId" (selectionChange)="getSubCategory($event.value)">
+                  @for (cat of categoryList; track cat) {
+                    <mat-option [value]="cat.id">{{ cat.name }}</mat-option>
+                  }
+                </mat-select>
+                @if (emerForm.get('categoryId')?.touched && emerForm.get('categoryId')?.hasError('required')) {
+                  <mat-error
+                    >
+                    Category is required
+                  </mat-error>
+                }
+              </mat-form-field>
+            </div>
+          } @else {
+
+            <div class="col-md-6">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Wing</mat-label>
+                <mat-select formControlName="wingId" (selectionChange)="getCategory($event.value)">
+                  @for (wingItem of wing; track wingItem) {
+                    <mat-option [value]="wingItem.id">{{ wingItem.name }}</mat-option>
+                  }
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div class="col-md-6">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Category</mat-label>
+                <mat-select formControlName="categoryId" (selectionChange)="getSubCategory($event.value)">
+                  @for (cat of categoryList; track cat) {
+                    <mat-option [value]="cat.id">{{ cat.name }}</mat-option>
+                  }
+                </mat-select>
+                @if (emerForm.get('categoryId')?.touched && emerForm.get('categoryId')?.hasError('required')) {
+                  <mat-error
+                    >
+                    Category is required
+                  </mat-error>
+                }
+              </mat-form-field>
+            </div>
+          }
+        }
+      </div>
+
+
+      <div class="row">
+        @if (SubFunctionType.length > 0) {
+          <div class="col-md-4">
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>Category</mat-label>
+              <mat-select formControlName="categoryId" (selectionChange)="getSubCategory($event.value)">
+                @for (cat of categoryList; track cat) {
+                  <mat-option [value]="cat.id">{{ cat.name }}</mat-option>
+                }
+              </mat-select>
+              @if (emerForm.get('categoryId')?.touched && emerForm.get('categoryId')?.hasError('required')) {
+                <mat-error>
+                  Category is required
+                </mat-error>
+              }
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>SubCategory</mat-label>
+              <mat-select formControlName="subCategoryId" (selectionChange)="getEqpt($event.value)">
+                @for (subCat of subCategoryList; track subCat) {
+                  <mat-option [value]="subCat.id">{{ subCat.name }}</mat-option>
+                }
+              </mat-select>
+              @if (emerForm.get('subCategoryId')?.touched && emerForm.get('subCategoryId')?.hasError('required')) {
+                <mat-error
+                  >
+                  Sub Category is required
+                </mat-error>
+              }
+            </mat-form-field>
+          </div>
+          <div class="col-md-4">
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>EQPT</mat-label>
+              <mat-select formControlName="eqpt">
+                @for (eqpt of eqptList; track eqpt) {
+                  <mat-option [value]="eqpt.name">{{ eqpt.name }}</mat-option>
+                }
+              </mat-select>
+              @if (emerForm.get('eqpt')?.touched && emerForm.get('eqpt')?.hasError('required')) {
+                <mat-error>
+                  Eqpt is required
+                </mat-error>
+              }
+            </mat-form-field>
+          </div>
+        } @else {
+          <div class="col-md-6">
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>SubCategory</mat-label>
+              <mat-select formControlName="subCategoryId" (selectionChange)="getEqpt($event.value)">
+                @for (subCat of subCategoryList; track subCat) {
+                  <mat-option [value]="subCat.id">{{ subCat.name }}</mat-option>
+                }
+              </mat-select>
+              @if (emerForm.get('subCategoryId')?.touched && emerForm.get('subCategoryId')?.hasError('required')) {
+                <mat-error
+                  >
+                  Sub Category is required
+                </mat-error>
+              }
+            </mat-form-field>
+          </div>
+          <div class="col-md-6">
+            <mat-form-field appearance="fill" class="w-100">
+              <mat-label>EQPT</mat-label>
+              <mat-select formControlName="eqpt">
+                @for (eqpt of eqptList; track eqpt) {
+                  <mat-option [value]="eqpt.name">{{ eqpt.name }}</mat-option>
+                }
+              </mat-select>
+              @if (emerForm.get('eqpt')?.touched && emerForm.get('eqpt')?.hasError('required')) {
+                <mat-error>
+                  Eqpt is required
+                </mat-error>
+              }
+            </mat-form-field>
+          </div>
+        }
+
+      </div>
+
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field>
+            <mat-label>Remarks</mat-label>
+            <textarea matInput formControlName="remarks" appAlphanumericOnly placeholder="Remarks"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <button mat-raised-button type="button" (click)="fileInput.click()" class="input-btn">Select File</button>
+          <input #fileInput type="file" style="display:none" (change)="onFileSelected($event)"
+            accept=".pdf, .xls, .xlsx" />
+          </div>
+          <br>
+            @if (alertMessage.length > 0) {
+              <div class="alert">{{alertMessage}}</div>
+            }
+            @if (fileName) {
+              <div class="file-info">
+                <div class="file-details">
+                  <p><strong>File Name:</strong> {{ fileName }}</p>
+                  @if (fileSizeFormatted.length > 0 && fileSizeFormatted != null) {
+                    <p><strong>File Size:</strong> {{
+                  fileSizeFormatted }}</p>
+                }
+              </div>
+              <button mat-icon-button class="remove-btn" type="button" (click)="removeFile()">
+                <img src="cross.png" alt="">
+              </button>
+            </div>
+          }
+        </div>
+
+
+
+      </mat-dialog-content>
+      <mat-dialog-actions>
+        <button type="button" class="btn btn-sm btn-danger" (click)="reset()">Reset</button>
+        <button type="button" class="btn btn-sm btn-warning" (click)="close()">Close</button>
+        <button type="submit" class="btn btn-sm btn-primary">Save</button>
+      </mat-dialog-actions>
+    </form>

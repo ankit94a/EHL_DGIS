@@ -1,0 +1,129 @@
+<h5 mat-dialog-title>Add Ep-Contract Policy</h5>
+<form [formGroup]="policy" (ngSubmit)="save()">
+  <mat-dialog-content>
+    <div class="row">
+      <div class="col-md-4">
+        <mat-form-field appearance="fill">
+          <mat-label>Wing</mat-label>
+          <mat-select [multiple]="false" formControlName="wingId" (selectionChange)="getCategory($event.value)" panelClass="custom-dropdown" placeholder="Wing">
+            @for (wing of wingList; track wing) {
+              <mat-option [value]="wing.id">
+                {{ wing.name }}
+              </mat-option>
+            }
+          </mat-select>
+          @if (policy.get('wingId')?.touched && policy.get('wingId')?.invalid) {
+            <mat-error>
+              Wing is required
+            </mat-error>
+          }
+        </mat-form-field>
+      </div>
+  <div class="col-md-4">
+        <mat-form-field appearance="fill">
+          <mat-label>Ep-Contract Type</mat-label>
+          <mat-select  [multiple]="false" formControlName="contractType"  panelClass="custom-dropdown" placeholder="Ep-Contract type">
+              <mat-option [value]="null">All</mat-option>
+              <mat-option [value]="'Capital'">Capital</mat-option>
+              <mat-option [value]="'Revenue'">Revenue</mat-option>
+              <mat-option [value]="'EP Capital'">EP Capital</mat-option>
+              <mat-option [value]="'EP Revenue'">EP Revenue</mat-option>
+              <mat-option [value]="'OCPP'">OCPP</mat-option>
+          </mat-select>
+          @if (policy.get('type')?.touched && policy.get('type')?.hasError('required')) {
+            <mat-error>
+              Ep-Contract Type is required
+            </mat-error>
+          }
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field appearance="fill">
+          <mat-label>Category</mat-label>
+          <mat-select [multiple]="false" formControlName="categoryId" [(ngModel)]="categoryId" (selectionChange)="getSubCategory($event.value)"
+            panelClass="custom-dropdown" placeholder="Category" required>
+            @for (category of categoryList; track category) {
+              <mat-option [value]="category.id">
+                {{ category.name }}
+              </mat-option>
+            }
+          </mat-select>
+          @if (policy.get('categoryId')?.touched && policy.get('categoryId')?.invalid) {
+            <mat-error>
+              Category is required
+            </mat-error>
+          }
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>SubCategory</mat-label>
+          <mat-select formControlName="subCategoryId" (selectionChange)="getEqpt($event.value)">
+            @for (subCat of subCategoryList; track subCat) {
+              <mat-option [value]="subCat.id">{{ subCat.name }}</mat-option>
+            }
+          </mat-select>
+          @if (policy.get('subCategoryId')?.touched && policy.get('subCategoryId')?.hasError('required')) {
+            <mat-error>
+              SubCategory is required
+            </mat-error>
+          }
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>EQPT</mat-label>
+          <mat-select formControlName="eqpt">
+            @for (eqpt of eqptList; track eqpt) {
+              <mat-option [value]="eqpt.name">{{ eqpt.name }}</mat-option>
+            }
+          </mat-select>
+          @if (policy.get('eqpt')?.touched && policy.get('eqpt')?.hasError('required')) {
+            <mat-error>
+              eqpt is required
+            </mat-error>
+          }
+        </mat-form-field>
+      </div>
+    </div>
+    <br>
+      <div class="row">
+        <mat-form-field>
+          <mat-label>Remarks</mat-label>
+          <textarea matInput appAlphanumericOnly formControlName="remarks" placeholder="Add remarks" ></textarea>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button mat-raised-button type="button" (click)="fileInput.click()" class="input-btn">Select File</button>
+          <input #fileInput type="file" style="display:none" (change)="onFileSelected($event)" accept=".pdf, .doc, .docx, .xls, .xlsx" />
+        </div>
+
+        <br>
+          @if (alertMessage.length > 0) {
+            <div class="alert">{{alertMessage}}</div>
+          }
+          @if (fileName) {
+            <div class="file-info">
+              <div class="file-details">
+                <p><strong>File Name:</strong> {{ fileName }}</p>
+                @if (fileSizeFormatted.length > 0 && fileSizeFormatted != null) {
+                  <p><strong>File Size:</strong> {{ fileSizeFormatted }}</p>
+                }
+              </div>
+              <button mat-icon-button class="remove-btn" type="button" (click)="removeFile()">
+                <img src="cross.png" alt="">
+              </button>
+            </div>
+          }
+        </div>
+
+      </mat-dialog-content>
+      <mat-dialog-actions>
+        <button type="button" class="btn btn-sm btn-danger" (click)="reset()">Reset</button>
+        <button type="button" class="btn btn-sm btn-warning" (click)="close()">Close</button>
+        <button type="submit" class="btn btn-sm btn-primary" >Save</button>
+      </mat-dialog-actions>
+    </form>

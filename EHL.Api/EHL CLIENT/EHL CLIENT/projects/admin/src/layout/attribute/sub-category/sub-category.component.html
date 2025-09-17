@@ -1,0 +1,41 @@
+<h5 mat-dialog-title>Add Sub Category</h5>
+<mat-dialog-content>
+  <div class="row">
+    <div class="col">
+      <mat-form-field appearance="fill">
+        <mat-label>Wing</mat-label>
+        <mat-select [multiple]="false" [(ngModel)]="subCategory.wingId" (selectionChange)="getCategory($event.value)" panelClass="custom-dropdown" placeholder="Wing">
+          @for (wing of wing; track wing) {
+            <mat-option [value]="wing.id">
+              {{ wing.name }}
+            </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field appearance="fill">
+        <mat-label>Category</mat-label>
+        <mat-select [multiple]="false" [(ngModel)]="subCategory.categoryId" panelClass="custom-dropdown" placeholder="Category">
+          @for (category of categoryList; track category) {
+            <mat-option [value]="category.id">
+              {{ category.name }}
+            </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input type="text" appAlphanumericOnly matInput [(ngModel)]="subCategory.name">
+      </mat-form-field>
+    </div>
+
+  </div>
+  <div class="btn-groupd" align="end">
+    <button type="button" class="btn btn-sm btn-danger" (click)="reset()">Reset</button>
+    <button type="button" class="btn btn-sm btn-warning" (click)="close()">Close</button>
+    <button type="button" class="btn btn-sm btn-primary" (click)="save()">Save</button>
+  </div>
+</mat-dialog-content>

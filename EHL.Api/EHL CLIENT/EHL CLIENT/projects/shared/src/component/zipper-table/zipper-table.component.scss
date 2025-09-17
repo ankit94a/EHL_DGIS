@@ -1,0 +1,36 @@
+
+.zipper-checkbox{
+    max-width: fit-content;
+}
+
+
+.column-header-content{
+    text-align: justify !important;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    padding-top:5px;
+}
+.example-container {
+    overflow: auto;
+  }
+.mat-mdc-select-trigger {
+  text-align: center !important;
+}
+.mat-mdc-select-value {
+    text-align:center!important;
+}
+
+::ng-deep .mat-mdc-paginator-page-size .mat-mdc-select-trigger {
+  display: flex !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100%;
+}
+
+::ng-deep .mat-mdc-paginator-page-size .mat-mdc-select-value {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100%;
+}
+

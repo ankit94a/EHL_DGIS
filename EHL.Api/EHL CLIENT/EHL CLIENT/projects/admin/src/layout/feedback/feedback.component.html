@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-title>
+    <div class="row">
+      <div class="col-md-3">Suggestion & Feedback</div>
+    </div>
+
+  </mat-card-title>
+  <mat-card-content>
+    @if (feedbackList.length > 0) {
+      <app-table [rowData]="feedbackList" [tablePaginationSettings]="tablePaginationSettings"
+         [isRefresh]="isRefresh" [allowMultiSelect]="true" [tableMaxHeight]="'83vh'"
+         [sqColumnDefinition]="columns"
+        >
+      </app-table>
+    }
+  </mat-card-content>
+</mat-card>

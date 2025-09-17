@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-md-9">Policies & Advisiories</div>
+      <div class="col-md-1" align="end">
+        <a href="/wing"><img src="back-arrow.png" height="30px" width="30px" alt="Master Sheet"> Back</a>
+      </div>
+      <div class="col-md-2" align="end">
+        @if (userType == '1') {
+          <button  class="btn btn-danger"  (click)="openDailog()">+ Add Policy</button>
+        }
+      </div>
+    </div>
+      <div>
+      <div class="col-md-4">
+        <mat-form-field appearance="fill">
+          <mat-label>Policies & Advisiories</mat-label>
+          <mat-select  panelClass="custom-dropdown" placeholder="Policies & Advisiories" (selectionChange)="filterPolicy($event.value)">
+            <mat-option [value]="null">All</mat-option>
+            <mat-option [value]="'Policy Compendium'">Policy Compendium</mat-option>
+            <mat-option [value]="'Advisories'">Advisories</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    @if (defectReports.length > 0) {
+      <app-table [rowData]="defectReports" [tablePaginationSettings]="tablePaginationSettings"
+        [enableCheckbox]="true" [isRowBackgroundColor]="true" [isRefresh]="isRefresh" [allowMultiSelect]="true"
+        [sqColumnDefinition]="columns" (edit)="edit($event)" (delete)="delete($event)" (getFileId)="getFileId($event)" [tableMaxHeight]="'80vh'"
+        >
+      </app-table>
+    }
+  </mat-card-content>
+</mat-card>

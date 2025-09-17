@@ -1,0 +1,59 @@
+.commandlogo{
+  height: 80px;
+  width: 160px;
+}
+
+.contents{
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  align-items: center;
+  min-height: auto;
+  padding: 0.25rem 1rem;
+}
+.contents > * {
+  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.app-header{
+  background: linear-gradient(60deg, rgb(139, 0, 0),rgb(255, 99, 71));
+  color: #fff;
+}
+
+.btn-white{
+  color: #fff;
+}
+
+.btn-link {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-link:hover {
+  color: #0056b3;
+}
+
+
+.inactivity-timer {
+  display: inline-block;
+  padding: 0px 20px;
+  background-color: #f2f7ff;
+  color: #003366;
+  font-weight: 750;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 2px solid #cce0ff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 17px;
+}
+
+.inactivity-timer:hover {
+  background-color: #e0ecff;
+  color: #001f4d;
+  cursor: pointer;
+}
+.white-bar{
+  color:#fff
+}

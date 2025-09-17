@@ -1,0 +1,23 @@
+@if (isOfficerLoggedIn) {
+  <div class="row custom-w">
+    <div class="col-md-2 offset-10">
+      <button (click)="downloadFile()" class="btn btn-danger">
+  Download PDF
+      </button>
+    </div>
+  </div>
+  <div class="pdf-container">
+     <pdf-viewer [src]="fileData" 
+              [render-text]="true"
+              [original-size]="false"
+              class="pdf-shows" [page]="true" [show-all]="true" [stick-to-page]="true"
+  ></pdf-viewer>
+  </div>
+}
+
+@if (!isOfficerLoggedIn) {
+  <div class="pdf-container">
+    <lib-ecr-token (isVarified)="isVarified($event)"></lib-ecr-token>
+  </div>
+}
+

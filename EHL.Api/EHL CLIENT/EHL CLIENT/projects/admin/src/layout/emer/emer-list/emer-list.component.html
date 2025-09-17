@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-title>
+    <div class="row">
+      <div class="col-md-3">EMER List</div>
+      <div class="col-md-7"></div>
+      <div class="col-md-2" align="end">
+        @if (userType == '0') {
+          <button class="btn btn-danger" (click)="openDialog()">+ Add EMER</button>
+        }
+      </div>
+    </div>
+
+  </mat-card-title>
+  <mat-card-content>
+    @if (emerList.length > 0) {
+      <app-table [rowData]="emerList" [tablePaginationSettings]="tablePaginationSettings"
+        [enableCheckbox]="true" [isRowBackgroundColor]="true" [isRefresh]="isRefresh" [allowMultiSelect]="true" [tableMaxHeight]="'83vh'"
+        (edit)="edit($event)" (delete)="del($event)" [sqColumnDefinition]="columns" (getFileId)="getFileId($event)"
+        >
+      </app-table>
+    }
+  </mat-card-content>
+</mat-card>

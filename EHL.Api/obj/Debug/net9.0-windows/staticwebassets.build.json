@@ -1,0 +1,331 @@
+{
+  "Version": 1,
+  "Hash": "SOrV+P2vcMVMvAFL77kXyLn5GTCYsp0ae6oYDCNkHu0=",
+  "Source": "EHL.Api",
+  "BasePath": "_content/EHL.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EHL.Api\\wwwroot",
+      "Source": "EHL.Api",
+      "ContentRoot": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\wwwroot\\",
+      "BasePath": "_content/EHL.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\wwwroot\\droneandicsc\\sample-local-pdf.pdf",
+      "SourceId": "EHL.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\wwwroot\\",
+      "BasePath": "_content/EHL.Api",
+      "RelativePath": "droneandicsc/sample-local-pdf#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gcctngqs9v",
+      "Integrity": "QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\droneandicsc\\sample-local-pdf.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\wwwroot\\droneandicsc\\sector.pdf",
+      "SourceId": "EHL.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\wwwroot\\",
+      "BasePath": "_content/EHL.Api",
+      "RelativePath": "droneandicsc/sector#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9s2yl9uomj",
+      "Integrity": "Z+Txy/jJjK/EFmILhmu4Y68bYqKn0yBYO4QVAcZueNA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\droneandicsc\\sector.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\wwwroot\\item\\sample-local-pdf.pdf",
+      "SourceId": "EHL.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\wwwroot\\",
+      "BasePath": "_content/EHL.Api",
+      "RelativePath": "item/sample-local-pdf#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gcctngqs9v",
+      "Integrity": "QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\item\\sample-local-pdf.pdf"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "droneandicsc/sample-local-pdf.gcctngqs9v.pdf",
+      "AssetFile": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\wwwroot\\droneandicsc\\sample-local-pdf.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49672"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 09:32:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gcctngqs9v"
+        },
+        {
+          "Name": "label",
+          "Value": "droneandicsc/sample-local-pdf.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA="
+        }
+      ]
+    },
+    {
+      "Route": "droneandicsc/sample-local-pdf.pdf",
+      "AssetFile": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\wwwroot\\droneandicsc\\sample-local-pdf.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49672"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 09:32:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA="
+        }
+      ]
+    },
+    {
+      "Route": "droneandicsc/sector.9s2yl9uomj.pdf",
+      "AssetFile": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\wwwroot\\droneandicsc\\sector.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20428"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Z+Txy/jJjK/EFmILhmu4Y68bYqKn0yBYO4QVAcZueNA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 09:32:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9s2yl9uomj"
+        },
+        {
+          "Name": "label",
+          "Value": "droneandicsc/sector.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Z+Txy/jJjK/EFmILhmu4Y68bYqKn0yBYO4QVAcZueNA="
+        }
+      ]
+    },
+    {
+      "Route": "droneandicsc/sector.pdf",
+      "AssetFile": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\wwwroot\\droneandicsc\\sector.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20428"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Z+Txy/jJjK/EFmILhmu4Y68bYqKn0yBYO4QVAcZueNA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 09:32:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Z+Txy/jJjK/EFmILhmu4Y68bYqKn0yBYO4QVAcZueNA="
+        }
+      ]
+    },
+    {
+      "Route": "item/sample-local-pdf.gcctngqs9v.pdf",
+      "AssetFile": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\wwwroot\\item\\sample-local-pdf.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49672"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 09:32:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gcctngqs9v"
+        },
+        {
+          "Name": "label",
+          "Value": "item/sample-local-pdf.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA="
+        }
+      ]
+    },
+    {
+      "Route": "item/sample-local-pdf.pdf",
+      "AssetFile": "C:\\Users\\ankit\\Downloads\\source_EHL_27June25\\source_EHL_27June25\\EHL.Api\\wwwroot\\item\\sample-local-pdf.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49672"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 09:32:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA="
+        }
+      ]
+    }
+  ]
+}

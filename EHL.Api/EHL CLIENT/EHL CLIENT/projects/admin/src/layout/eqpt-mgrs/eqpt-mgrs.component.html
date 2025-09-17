@@ -1,0 +1,13 @@
+<div class="pdf-container">
+    
+<div class="row custom-w">
+    <div class="col-md-2 offset-9">
+     <button class="btn btn-danger" (click)="downloadPdf()">Download PDF</button>
+    </div>
+  </div>
+   <pdf-viewer src="Eqpt Mgrs.pdf"
+              [render-text]="true"
+              [original-size]="false"
+              class="pdf-shows"
+  ></pdf-viewer>
+</div>

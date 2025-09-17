@@ -1,0 +1,252 @@
+{
+  "Version": 1,
+  "ManifestType": "Build",
+  "Endpoints": [
+    {
+      "Route": "droneandicsc/sample-local-pdf.gcctngqs9v.pdf",
+      "AssetFile": "droneandicsc/sample-local-pdf.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49672"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 09:32:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gcctngqs9v"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA="
+        },
+        {
+          "Name": "label",
+          "Value": "droneandicsc/sample-local-pdf.pdf"
+        }
+      ]
+    },
+    {
+      "Route": "droneandicsc/sample-local-pdf.pdf",
+      "AssetFile": "droneandicsc/sample-local-pdf.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49672"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 09:32:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA="
+        }
+      ]
+    },
+    {
+      "Route": "droneandicsc/sector.9s2yl9uomj.pdf",
+      "AssetFile": "droneandicsc/sector.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20428"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Z+Txy/jJjK/EFmILhmu4Y68bYqKn0yBYO4QVAcZueNA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 09:32:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9s2yl9uomj"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Z+Txy/jJjK/EFmILhmu4Y68bYqKn0yBYO4QVAcZueNA="
+        },
+        {
+          "Name": "label",
+          "Value": "droneandicsc/sector.pdf"
+        }
+      ]
+    },
+    {
+      "Route": "droneandicsc/sector.pdf",
+      "AssetFile": "droneandicsc/sector.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20428"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Z+Txy/jJjK/EFmILhmu4Y68bYqKn0yBYO4QVAcZueNA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 09:32:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Z+Txy/jJjK/EFmILhmu4Y68bYqKn0yBYO4QVAcZueNA="
+        }
+      ]
+    },
+    {
+      "Route": "item/sample-local-pdf.gcctngqs9v.pdf",
+      "AssetFile": "item/sample-local-pdf.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49672"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 09:32:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gcctngqs9v"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA="
+        },
+        {
+          "Name": "label",
+          "Value": "item/sample-local-pdf.pdf"
+        }
+      ]
+    },
+    {
+      "Route": "item/sample-local-pdf.pdf",
+      "AssetFile": "item/sample-local-pdf.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49672"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Sep 2025 09:32:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QMW3M9DiHFOp5A+m653wG7aJi4QvXxO9QttWJMKpfdA="
+        }
+      ]
+    }
+  ]
+}

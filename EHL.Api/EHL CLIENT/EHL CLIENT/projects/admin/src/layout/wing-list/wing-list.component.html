@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-card-content>
+    <div class="row">
+      @for (wing of wingList; track wing; let i = $index) {
+        <div class="col-md-4 custom py-2">
+          <div class="card">
+            <img [src]="wing.imageUrl" alt="Card Image">
+            <div class="card-content">
+              <h3>{{ wing.name }}</h3>
+              <p>{{ wing.description }}</p>
+              <button (click)="setWingData(wing)">View</button>
+            </div>
+          </div>
+        </div>
+      @if (i === wingList.length - 1) {
+        <div class="card col-md-4">
+          <div class="folder-grid">
+            @for (item of masterSheetItems; track item) {
+              <div class="folder-item" (click)="navigateTo(item.link, $event)">
+                <img [src]="item.icon" alt="{{ item.name }}" />
+                <span>{{ item.name }}</span>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    }
+  </div>
+</mat-card-content>
+</mat-card>

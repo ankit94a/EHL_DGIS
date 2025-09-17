@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-md-10">Tech Manuals List</div>
+      <div class="col-md-2" align="end">
+        @if (userType == '1') {
+          <button class="btn btn-danger" (click)="openDailog()">+ Add Tech Manuals</button>
+        }
+      </div>
+    </div>
+    <div>
+      <div class="col-md-4">
+        <mat-form-field appearance="fill">
+          <mat-label>Policy Letter & Misc Type</mat-label>
+          <mat-select  panelClass="custom-dropdown" placeholder="Policy letter & Misc type" (selectionChange)="filterPolicy($event.value)">
+            <mat-option [value]="null">All</mat-option>
+            <mat-option [value]="'Technical Manuals'">Technical Manuals</mat-option>
+            <mat-option [value]="'Misc'">Misc</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    @if (policyList.length > 0) {
+      <app-table [rowData]="policyList" [tablePaginationSettings]="tablePaginationSettings"
+        [enableCheckbox]="true" [isRowBackgroundColor]="true" [isRefresh]="isRefresh" [allowMultiSelect]="true"
+        (edit)="edit($event)"  (delete)="delete($event)"  [sqColumnDefinition]="columns" (getFileId)="getFileId($event)" [tableMaxHeight]="'72vh'"
+        >
+      </app-table>
+    }
+  </mat-card-content>
+</mat-card>

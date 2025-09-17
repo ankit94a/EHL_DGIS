@@ -1,0 +1,124 @@
+[
+
+  {
+    "text": "EMER",
+    "icon": "/hammer.svg",
+    "routerLink": "/emer",
+    "permissionName": "Emer",
+    "permissionAction": "ViewAll",
+    "children": [
+      {
+        "text": "Emer-list",
+        "icon": "/creative-commons.svg",
+        "routerLink": "/emer",
+        "permissionName": "Emer",
+        "permissionAction": "ViewAll"
+      },
+
+      {
+        "text": "Index",
+        "icon": "/creative-commons.svg",
+        "routerLink": "/emer-index",
+        "permissionName": "IndexEmer",
+        "permissionAction": "ViewAll"
+      }
+    ]
+  },
+  {
+
+    "text": "Tech Manuals/Publications",
+    "icon": "/bars-progress.svg",
+    "routerLink": "/tech-manual",
+    "permissionName": "Technical Manuals",
+    "permissionAction": "ViewAll"
+
+  },
+  {
+    "text": "Technical AO/AI",
+    "icon": "/newspaper.svg",
+    "routerLink": "/technical-ao/ai",
+    "permissionName": "TechnicalAoAI",
+    "permissionAction": "ViewAll"
+  },
+
+  {
+    "text": "Contracts",
+    "icon": "/truck-fast.svg",
+    "routerLink": "/ep-contract",
+    "permissionName": "EpContract",
+    "permissionAction": "ViewAll"
+
+  },
+  {
+    "text": "MRLS Distr List",
+    "icon": "/bookmark.svg",
+    "routerLink": "/mrls-distr",
+    "permissionName": "MrlsDistrList",
+    "permissionAction": "ViewAll"
+  },
+  {
+    "text": "ISPL",
+    "icon": "/ispl.png",
+    "routerLink": "/ispl",
+    "permissionName": "ISPL",
+    "permissionAction": "ViewAll"
+  },
+   {
+    "text": "LCSC",
+    "icon": "/lcsc.png",
+    "routerLink": "/isppl-list",
+    "permissionName": "ISPPL",
+    "permissionAction": "ViewAll"
+  },
+   {
+    "text": "Drone Standard",
+    "icon": "/drone.png",
+    "routerLink": "/drone-induction-list",
+    "permissionName": "DRONE",
+    "permissionAction": "ViewAll"
+  },
+  {
+    "text": "SMTE/STE Distr List",
+    "icon": "/file-excel.svg",
+    "routerLink": "/smte/ste-distr",
+    "permissionName": "DefectReport",
+    "permissionAction": "ViewAll"
+  },
+  {
+    "text": "Oils & Lubs",
+    "icon": "/newspaper.svg",
+    "routerLink": "/Oil",
+    "permissionAction": "ViewAll",
+    "permissionName": "Oillubs"
+  },
+
+  {
+    "text": "Defect Report",
+    "icon": "/file-excel.svg",
+    "routerLink": "/defect-report",
+    "permissionName": "DefectReport",
+    "permissionAction": "ViewAll"
+  },
+  {
+    "text": "Eqpt Mgrs",
+    "icon": "/creative-commons.svg",
+    "routerLink": "/eqpt-mgrs",
+    "permissionName": "EqptMgrs",
+    "permissionAction": "ViewAll"
+  }
+  ,
+  {
+    "text": "Suggestion & Feedback",
+    "icon": "/feedback.png",
+    "routerLink": "/feedback",
+    "permissionName": "Feedback",
+    "permissionAction": "ViewAll"
+  },
+  {
+    "text": "Attribute",
+    "icon": "/creative-commons.svg",
+    "routerLink": "/attribute",
+    "permissionName": "Attribute",
+    "permissionAction": "ViewAll"
+  }
+]

@@ -1,0 +1,75 @@
+<h5 mat-dialog-title>Add Lcsc</h5>
+<form [formGroup]="drone" (ngSubmit)="save()">
+  <mat-dialog-content>
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field appearance="fill">
+          <mat-label>Lcsc Type</mat-label>
+          <mat-select formControlName="type" panelClass="custom-dropdown" placeholder="Lcsc type">
+            <mat-option [value]="'ISPPL'">ISPPL</mat-option>
+            <mat-option [value]="'RIPL'">RIPL</mat-option>
+          </mat-select>
+          @if (drone.get('type')?.touched && drone.get('type')?.hasError('required')) {
+            <mat-error>
+              Drone Type is required
+            </mat-error>
+          }
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field>
+          <mat-label>Eqpt</mat-label>
+          <input matInput appAlphanumericOnly formControlName="nomenClature" placeholder="eqpt" required >
+          @if (drone.get('nomenClature')?.touched && drone.get('nomenClature')?.hasError('required')) {
+            <mat-error>
+              eqpt is required
+            </mat-error>
+          }
+        </mat-form-field>
+      </div>
+      <div class="col-md-6">
+        <mat-form-field>
+          <mat-label>Remarks</mat-label>
+          <input matInput appAlphanumericOnly formControlName="remarks" placeholder="Remarks" required >
+          @if (drone.get('remarks')?.touched && drone.get('remarks')?.hasError('required')) {
+            <mat-error>
+              Remarks is required
+            </mat-error>
+          }
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button mat-raised-button type="button" (click)="fileInput.click()" class="input-btn">Select File</button>
+        <input #fileInput type="file" style="display:none" (change)="onFileSelected($event)" accept=".pdf, .doc, .docx, .xls, .xlsx" />
+
+        <br>
+          @if (alertMessage.length > 0) {
+            <div class="alert">{{alertMessage}}</div>
+          }
+          @if (fileName) {
+            <div class="file-info">
+              <div class="file-details">
+                <p><strong>File Name:</strong> {{ fileName }}</p>
+                @if (fileSizeFormatted.length > 0 && fileSizeFormatted != null) {
+                  <p><strong>File Size:</strong> {{ fileSizeFormatted }}</p>
+                }
+              </div>
+              <button mat-icon-button class="remove-btn" type="button" (click)="removeFile()">
+                <img src="cross.png" alt="">
+              </button>
+            </div>
+          }
+        </div>
+
+      </div>
+
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button type="button" class="btn btn-sm btn-danger" (click)="reset()">Reset</button>
+      <button type="button" class="btn btn-sm btn-warning" (click)="close()">Close</button>
+      <button type="submit" class="btn btn-sm btn-primary" >Save</button>
+    </mat-dialog-actions>
+  </form>
+

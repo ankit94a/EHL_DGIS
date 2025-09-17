@@ -1,0 +1,35 @@
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\bin\Release\net9.0\EHL.Business.deps.json
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\bin\Release\net9.0\EHL.Business.dll
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\bin\Release\net9.0\EHL.Business.pdb
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\bin\Release\net9.0\EHL.Common.dll
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\bin\Release\net9.0\EHL.DB.dll
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\bin\Release\net9.0\EHL.Common.pdb
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\bin\Release\net9.0\EHL.DB.pdb
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\obj\Release\net9.0\EHL.Business.csproj.AssemblyReference.cache
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\obj\Release\net9.0\EHL.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\obj\Release\net9.0\EHL.Business.AssemblyInfoInputs.cache
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\obj\Release\net9.0\EHL.Business.AssemblyInfo.cs
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\obj\Release\net9.0\EHL.Business.csproj.CoreCompileInputs.cache
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\obj\Release\net9.0\EHL.Business.sourcelink.json
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\obj\Release\net9.0\EHL.Busi.32AC89C3.Up2Date
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\obj\Release\net9.0\EHL.Business.dll
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\obj\Release\net9.0\refint\EHL.Business.dll
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\obj\Release\net9.0\EHL.Business.pdb
+C:\Users\praja.HP\OneDrive\Desktop\createch\new_EHL_final 21-06-2025\New_EHL\EHL.Business\obj\Release\net9.0\ref\EHL.Business.dll
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\bin\Release\net9.0\EHL.Business.deps.json
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\bin\Release\net9.0\EHL.Business.dll
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\bin\Release\net9.0\EHL.Business.pdb
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\bin\Release\net9.0\EHL.Common.dll
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\bin\Release\net9.0\EHL.DB.dll
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\bin\Release\net9.0\EHL.Common.pdb
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\bin\Release\net9.0\EHL.DB.pdb
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\obj\Release\net9.0\EHL.Business.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\obj\Release\net9.0\EHL.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\obj\Release\net9.0\EHL.Business.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\obj\Release\net9.0\EHL.Business.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\obj\Release\net9.0\EHL.Business.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\obj\Release\net9.0\EHL.Busi.32AC89C3.Up2Date
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\obj\Release\net9.0\EHL.Business.dll
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\obj\Release\net9.0\refint\EHL.Business.dll
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\obj\Release\net9.0\EHL.Business.pdb
+C:\Users\Administrator\Desktop\source_27June25\EHL.Business\obj\Release\net9.0\ref\EHL.Business.dll

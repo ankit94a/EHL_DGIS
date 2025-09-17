@@ -1,0 +1,14 @@
+<h5 mat-dialog-title>Add Wing</h5>
+<mat-dialog-content>
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input type="text" appAlphanumericOnly matInput [(ngModel)]="wing.name">
+    </mat-form-field>
+  </div>
+  <div class="btn-groupd" align="end">
+    <button type="button" class="btn btn-sm btn-danger" (click)="reset()">Reset</button>
+    <button type="button" class="btn btn-sm btn-warning" (click)="close()">Close</button>
+    <button type="button" class="btn btn-sm btn-primary" (click)="save()" (keyup.enter)="save()" >Save</button>
+  </div>
+</mat-dialog-content>

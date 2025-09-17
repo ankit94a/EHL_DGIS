@@ -1,0 +1,34 @@
+
+
+<mat-nav-list class="sidebar-img">
+  <a class="navbar-brand" href="/dashboard"></a>
+  @for (menu of sideBarMenus | filterSidebar:roleType; track menu) {
+    <span>
+    <a mat-list-item (click)="addExpandClass(menu.text)"
+      [routerLink]="menu.routerLink" routerLinkActive="active">
+      <img [src]="'assets/icon' + menu.icon" alt="{{ menu.text }}" width="20" height="20" />
+      <span class="nav-caption mx-2">{{menu.text}}</span>
+      @if (menu.children?.length) {
+        <img
+          src="assets/icon/chevron-down.svg"
+          alt="Chevron Down Icon"
+          [ngClass]="{'rotated': showMenu === menu.text}"
+          width="14" height="14" />
+      }
+    </a>
+    @if (menu.children?.length) {
+      <ul
+        class="submenu" [ngClass]="{'expanded': showMenu === menu.text}">
+        @for (subMenu of menu.children; track subMenu) {
+          <li class="nav-item">
+            <a mat-list-item [routerLink]="subMenu.routerLink" routerLinkActive="active">
+              <img [src]="'assets/icon' + subMenu.icon" alt="{{ subMenu.text }}" width="20" height="20" />
+              <span class="nav-caption mx-2">{{subMenu.text}}</span>
+            </a>
+          </li>
+        }
+      </ul>
+    }
+  </span>
+}
+</mat-nav-list>

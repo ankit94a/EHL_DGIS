@@ -1,0 +1,56 @@
+<h5 mat-dialog-title>Add EQPT</h5>
+<mat-dialog-content>
+  <div class="row">
+    <div class="col">
+      <mat-form-field appearance="fill">
+        <mat-label>Wing</mat-label>
+        <mat-select [multiple]="false" [(ngModel)]="eqpt.wingId" (selectionChange)="getCategory($event.value)" panelClass="custom-dropdown" placeholder="Wing">
+          @for (wing of wing; track wing) {
+            <mat-option [value]="wing.id">
+              {{ wing.name }}
+            </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field appearance="fill">
+        <mat-label>Category</mat-label>
+        <mat-select [multiple]="false" [(ngModel)]="eqpt.categoryId" (selectionChange)="getSubCategory($event.value)" panelClass="custom-dropdown" placeholder="Category">
+          @for (category of categoryList; track category) {
+            <mat-option [value]="category.id">
+              {{ category.name }}
+            </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+    </div>
+    <div class="col">
+      <mat-form-field>
+        <mat-label>Sub Category</mat-label>
+        <mat-select [multiple]="false" [(ngModel)]="eqpt.subCategoryId"  panelClass="custom-dropdown" placeholder="Sub-Category">
+          @for (subCategory of subCategoryList; track subCategory) {
+            <mat-option [value]="subCategory.id">
+              {{ subCategory.name }}
+            </mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input type="text" appAlphanumericOnly matInput [(ngModel)]="eqpt.name">
+      </mat-form-field>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions >
+  <button type="button" class="btn btn-sm btn-danger"(click)="reset()">Reset</button>
+  <button type="button" class="btn btn-sm btn-warning"(click)="close()">Close</button>
+  <button type="button" class="btn btn-sm btn-primary" (click)="save()">Save</button>
+
+</mat-dialog-actions>

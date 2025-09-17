@@ -1,0 +1,30 @@
+<mat-toolbar   class="app-header">
+  <mat-toolbar-row>
+    <div class="contents">
+      <div fxShow="true">
+        @if (wing$ | async; as wing) {
+          <button mat-icon-button (click)="toggleSideBar()">
+            <img src="bars.svg" alt="bars" >
+          </button>
+        }
+      </div>
+      <span class="example-spacer">@if (wing$ | async; as wing) {
+        <div>
+          <a routerLink="wing" class="btn-link" (click)="removeWing()">{{ wing }}</a>
+        </div>
+      }
+
+
+    </span>
+    <span class="inactivity-timer mx-2">
+      {{ timer$() | timer}}
+    </span>
+
+    <button mat-button class="inactivity-timer" (click)="onLoggedout()">
+      <img src="sign-out.svg" width="25px"  alt="sign-out">
+      <span > Sign out</span>
+    </button>
+  </div>
+</mat-toolbar-row>
+
+</mat-toolbar>

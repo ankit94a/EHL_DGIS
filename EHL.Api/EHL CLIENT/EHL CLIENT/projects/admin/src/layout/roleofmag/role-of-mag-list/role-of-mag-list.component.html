@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-title>
+    <div class="row">
+      <div class="col-md-3">Role of MAG List</div>
+      <div class="col-md-6"></div>
+      <div class="col-md-3" align="end">
+        <a href="/wing"><img src="back-arrow.png" height="30px" width="30px" alt="Master Sheet"> Back</a>
+          @if (userType == '1') {
+        <button class="btn btn-danger mx-3" (click)="openDialog()" >+ Add Role of MAG</button>
+          }
+      </div>
+    </div>
+
+  </mat-card-title>
+  <mat-card-content>
+ @if (roleofMagList.length > 0) {
+      <app-table [rowData]="roleofMagList" [tablePaginationSettings]="tablePaginationSettings"
+        [isRowBackgroundColor]="true" [isRefresh]="isRefresh" [allowMultiSelect]="true" [tableMaxHeight]="'80vh'"
+        (edit)="edit($event)" (delete)="del($event)" [sqColumnDefinition]="columns"
+        >
+      </app-table>
+    }
+  </mat-card-content>
+</mat-card>

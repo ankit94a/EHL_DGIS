@@ -1,0 +1,65 @@
+<mat-dialog-content class="content-box">
+  <div class="top-box">
+    <h5 class="header-text">EHL </h5>
+    <div class="text">Equipment Helpline Login Portal</div>
+  </div>
+  <form [formGroup]="loginform" class="py-2" (ngSubmit)="doLogin()">
+    <div class="row">
+      <mat-form-field appearance="outline" class="username-field">
+        <mat-label>Username</mat-label>
+        <input formControlName="username" type="text" matInput placeholder="Enter your username" required />
+        <button mat-icon-button matSuffix type="button" disabled>
+          <img src="user.svg" alt="user">
+        </button>
+        @if (loginform.get('username')?.touched && loginform.get('username')?.invalid) {
+        <mat-error>
+          Username is required
+        </mat-error>
+        }
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field class="password-field" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input formControlName="password" [type]="showPassword ? 'text' : 'password'" minlength="8" maxlength="15" matInput
+          placeholder="Enter your password" autocomplete="off" required />
+        <button mat-icon-button matSuffix (click)="togglePasswordVisibility()" type="button">
+          <img src="eye.svg" alt="show-password">
+        </button>
+        <mat-error *ngIf="loginform.get('password')?.touched && loginform.get('password')?.hasError('required')">
+          Password is required
+        </mat-error>
+        <mat-error *ngIf="loginform.get('password')?.touched && loginform.get('password')?.hasError('complexPassword')">
+          Password must be at least 8 characters and include uppercase, lowercase, number, and special character.
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="row captcha-row">
+      <div class="col-md-4 captcha">
+        <div class="captcha-box">
+          <div class="captcha-code">{{ captchaCode.code }}</div>
+        </div>
+      </div>
+      <div class="col-md-2"><button class="refresh-button" type="button" (click)="getCaptcha()">refresh</button></div>
+      <div class="col-md-6">
+        <mat-form-field class="captcha-field" appearance="outline">
+          <mat-label>Enter CAPTCHA</mat-label>
+          <input matInput formControlName="code" placeholder="Enter the code" required />
+          @if (loginform.get('code')?.touched && loginform.get('code')?.invalid) {
+          <mat-error>CAPTCHA is required</mat-error>
+          }
+        </mat-form-field>
+      </div>
+    </div>
+    <button class="btn custom-btn" type="submit">Login</button>
+    <br>
+
+  </form>
+  @if(errorMessage.length > 0){
+  <div class="row custom-error">
+    {{errorMessage}}
+  </div>
+  }
+</mat-dialog-content>

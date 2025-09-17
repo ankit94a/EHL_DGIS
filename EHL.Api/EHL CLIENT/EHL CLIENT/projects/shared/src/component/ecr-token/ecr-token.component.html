@@ -1,0 +1,27 @@
+<div class="login-box">
+  <h2>Officer Login</h2>
+<div *ngIf="tokenErrorMessage?.message">
+  <p style="color: rgba(253, 3, 3, 0.466);">{{ tokenErrorMessage.message }}</p>
+</div>
+
+
+
+  <!-- <form  *ngIf="tokenInfo" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <label>{{subject}}</label>
+    <label for="pin">Enter PIN</label>
+    <input type="password" id="pin" formControlName="pin" placeholder="Enter Token PIN" />
+    <div *ngIf="form.controls['pin'].invalid && form.controls['pin'].touched" class="error">
+      PIN is required
+    </div>
+
+    <button type="submit" [disabled]="form.invalid" class="btn-all btn-danger">
+      Validate PIN
+    </button>
+    <div *ngIf="pinErrorMessage">+
+  <p style="color: rgba(253, 3, 3, 0.466);">{{ pinErrorMessage.message || pinErrorMessage }}</p>
+</div>
+  </form>
+  <div *ngIf="validationResult">
+    <p class="success">PIN validated successfully.</p>
+  </div> -->
+</div>

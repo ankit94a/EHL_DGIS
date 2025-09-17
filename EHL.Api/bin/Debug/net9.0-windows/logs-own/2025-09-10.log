@@ -1,0 +1,1 @@
+2025-09-10 17:09:05.7267||WARN|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The WebRootPath was not found: D:\Codebase\10-09-EHL\source_EHL_27June25\EHL.Api\wwwroot. Static files may be unavailable. |url: |action: 

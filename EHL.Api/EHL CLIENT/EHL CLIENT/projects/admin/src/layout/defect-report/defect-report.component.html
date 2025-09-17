@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-md-10">Defect Reports</div>
+      <div class="col-md-2" align="end">
+        @if (userType == '1') {
+          <button class="btn btn-danger" (click)="openDailog()">+ Add Report</button>
+        }
+      </div>
+    </div>
+    @if (defectReports.length > 0) {
+      <app-table [rowData]="defectReports" [tablePaginationSettings]="tablePaginationSettings"
+        [enableCheckbox]="true" [isRowBackgroundColor]="true" [isRefresh]="isRefresh" [allowMultiSelect]="true"
+        [sqColumnDefinition]="columns" (edit)="edit($event)" (delete)="delete($event)" (getFileId)="getFileId($event)" [tableMaxHeight]="'80vh'"
+        >
+      </app-table>
+    }
+  </mat-card-content>
+</mat-card>

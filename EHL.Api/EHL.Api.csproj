@@ -1,0 +1,37 @@
+﻿
+	<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BouncyCastle.NetCore" Version="2.2.1" />
+		<PackageReference Include="itext7" Version="9.2.0" />
+		<PackageReference Include="itext7.bouncy-castle-adapter" Version="9.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.6" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="NLog" Version="6.0.1" />
+		<PackageReference Include="NLog.Extensions.Logging" Version="6.0.1" />
+		<PackageReference Include="NLog.Web.AspNetCore" Version="6.0.1" />
+		<PackageReference Include="Pkcs11Interop" Version="5.3.0" />
+		<PackageReference Include="SixLabors.ImageSharp" Version="3.1.10" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.1" />
+		<PackageReference Include="System.Drawing.Common" Version="9.0.6" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\EHL.Business\EHL.Business.csproj" />
+		<ProjectReference Include="..\EHL.Common\EHL.Common.csproj" />
+		<ProjectReference Include="..\EHL.DB\EHL.DB.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="wwwroot\index\" />
+		<Folder Include="wwwroot\technicalAoAi\" />
+		<Folder Include="wwwroot\policy\" />
+	</ItemGroup>
+
+</Project>

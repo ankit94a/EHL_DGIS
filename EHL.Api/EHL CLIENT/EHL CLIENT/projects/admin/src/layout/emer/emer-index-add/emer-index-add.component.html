@@ -1,0 +1,76 @@
+<h4 mat-dialog-title>Add EMER Index</h4>
+<form [formGroup]="emerForm" (ngSubmit)="save()">
+  <mat-dialog-content>
+    <div class="row">
+      <div class="col-md-4">
+        <mat-form-field>
+          <mat-label>EMERNumber</mat-label>
+          <input formControlName="emerNumber" appAlphanumericOnly type="text" matInput placeholder="EMERNumber"
+            required />
+            @if (emerForm.get('emerNumber')?.touched && emerForm.get('emerNumber')?.invalid) {
+              <mat-error>
+                EMER number is required
+              </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Category</mat-label>
+            <mat-select formControlName="categoryId" >
+              @for (cat of categoryList; track cat) {
+                <mat-option [value]="cat.id">{{ cat.name }}</mat-option>
+              }
+            </mat-select >
+            @if (emerForm.get('categoryId')?.touched && emerForm.get('categoryId')?.invalid) {
+              <mat-error>
+                Category is required
+              </mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col-md-4">
+          <mat-form-field>
+            <mat-label>Subject</mat-label>
+            <input formControlName="subject" appAlphanumericOnly type="text" matInput placeholder="Subject" required />
+            @if (emerForm.get('subject')?.touched && emerForm.get('subject')?.invalid) {
+              <mat-error>
+                Subject is required
+              </mat-error>
+            }
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <button mat-raised-button type="button" (click)="fileInput.click()" class="input-btn">Select File</button>
+          <input #fileInput type="file" style="display:none" (change)="onFileSelected($event)"
+            accept=".pdf, .doc, .docx, .xls, .xlsx" />
+          </div>
+          <br>
+            @if (alertMessage.length > 0) {
+              <div class="alert">{{alertMessage}}</div>
+            }
+            @if (fileName) {
+              <div class="file-info">
+                <div class="file-details">
+                  <p><strong>File Name:</strong> {{ fileName }}</p>
+                  @if (fileSizeFormatted.length > 0 && fileSizeFormatted != null) {
+                    <p><strong>File Size:</strong> {{ fileSizeFormatted }}</p>
+                  }
+                </div>
+                <button mat-icon-button class="remove-btn" type="button" (click)="removeFile()">
+                  <img src="cross.png" alt="">
+                </button>
+              </div>
+            }
+          </div>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+          <button type="button" class="btn btn-sm btn-danger" (click)="reset()">Reset</button>
+          <button type="button" class="btn btn-sm btn-warning" (click)="close()">Close</button>
+          <button type="submit" class="btn btn-sm btn-primary">Save</button>
+        </mat-dialog-actions>
+      </form>

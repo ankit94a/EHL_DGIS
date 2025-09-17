@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-title>
+    <div class="row">
+      <div class="col-md-3">MasterSheet List</div>
+      <div class="col-md-7"></div>
+      <div class="col-md-2" align="end">
+        <a [routerLink]="'/wing'" class="btn-link">
+          <img src="back-arrow.png" height="30px" width="30px" alt="Master Sheet"> Back
+        </a>
+      </div>
+    </div>
+
+  </mat-card-title>
+  <mat-card-content>
+    @if (masterSheetList.length > 0) {
+      <app-table [rowData]="masterSheetList" [tablePaginationSettings]="tablePaginationSettings"
+        [enableCheckbox]="true" [isRowBackgroundColor]="true" [isRefresh]="isRefresh" [allowMultiSelect]="true"
+        [sqColumnDefinition]="columns" [tableMaxHeight]="'80vh'">
+      </app-table>
+    }
+  </mat-card-content>
+</mat-card>

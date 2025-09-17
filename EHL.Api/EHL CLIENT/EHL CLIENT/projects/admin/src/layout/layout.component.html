@@ -1,0 +1,58 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <mat-toolbar>
+      <img class="logo" src="/logo.webp" alt="Logo"> &nbsp;
+      <span class="brand-caption">EHL </span>
+    </mat-toolbar>
+    <app-sidebar (isloaded)="isLoaded($event)"></app-sidebar>
+  </mat-drawer>
+  <mat-drawer-content class="drawer-container">
+    <app-header (toggleSideBarForMe)="sideBarToggler()"></app-header>
+    <div class="content">
+      <ngx-spinner type="square-jelly-box" class="text-white">Loading...</ngx-spinner>
+      <router-outlet></router-outlet>
+      <!-- <div class="avatar-container" (click)="chatbox()" [ngStyle]="{ top: position.y + 'px', left: position.x + 'px' }">
+        <div class="avatar-circle">
+          <button (mousedown)="startDrag($event)">
+            <img src="army_man.png" alt="Avatar" class="avatar-img" />
+          </button>
+        </div>
+        <div class="ask-button">
+          Chatbot for EHL Queries
+        </div>
+      </div> -->
+      <!-- Right bottom chatbot -->
+
+
+    </div>
+  </mat-drawer-content>
+
+</mat-drawer-container>
+<div class="avatar-container"  
+     (click)="chatbox('right')"
+     [ngStyle]="{ top: rightPosition.y + 'px', left: rightPosition.x + 'px' }">
+  <div class="avatar-circle">
+    <button (mousedown)="startDrag($event, 'right')">
+      <img src="army_man.png" alt="Avatar" class="avatar-img" />
+    </button>
+  </div>
+  <div class="ask-button">
+    Chatbot for EHL Queries
+  </div>
+</div>
+
+<!-- Left bottom chatbot -->
+<div class="avatar-container" *ngIf="showLeftAvatar"
+     (click)="chatbox('left')"
+     [ngStyle]="{ top: leftPosition.y + 'px', left: leftPosition.x + 'px' }">
+  <div class="avatar-square">
+    <button (mousedown)="startDrag($event, 'left')">
+      <img src="support.png" alt="Avatar" class="avatar-img-square" />
+    </button>
+  </div>
+  <div class="ask-button">
+    SANVARDAK
+  </div>
+</div>
+
+

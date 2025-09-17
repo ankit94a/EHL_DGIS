@@ -1,0 +1,40 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/EHL.Api/droneandicsc/sample-local-pdf.gcctngqs9v.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\droneandicsc\sample-local-pdf.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"gcctngqs9v"},{"Name":"integrity","Value":"sha256-QMW3M9DiHFOp5A\u002Bm653wG7aJi4QvXxO9QttWJMKpfdA="},{"Name":"label","Value":"_content/EHL.Api/droneandicsc/sample-local-pdf.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"49672"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022QMW3M9DiHFOp5A\u002Bm653wG7aJi4QvXxO9QttWJMKpfdA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 13 Sep 2025 09:32:52 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/EHL.Api/droneandicsc/sample-local-pdf.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\droneandicsc\sample-local-pdf.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-QMW3M9DiHFOp5A\u002Bm653wG7aJi4QvXxO9QttWJMKpfdA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"49672"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022QMW3M9DiHFOp5A\u002Bm653wG7aJi4QvXxO9QttWJMKpfdA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 13 Sep 2025 09:32:52 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/EHL.Api/droneandicsc/sector.9s2yl9uomj.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\droneandicsc\sector.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"9s2yl9uomj"},{"Name":"integrity","Value":"sha256-Z\u002BTxy/jJjK/EFmILhmu4Y68bYqKn0yBYO4QVAcZueNA="},{"Name":"label","Value":"_content/EHL.Api/droneandicsc/sector.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"20428"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022Z\u002BTxy/jJjK/EFmILhmu4Y68bYqKn0yBYO4QVAcZueNA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 13 Sep 2025 09:32:52 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/EHL.Api/droneandicsc/sector.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\droneandicsc\sector.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Z\u002BTxy/jJjK/EFmILhmu4Y68bYqKn0yBYO4QVAcZueNA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"20428"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022Z\u002BTxy/jJjK/EFmILhmu4Y68bYqKn0yBYO4QVAcZueNA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 13 Sep 2025 09:32:52 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/EHL.Api/item/sample-local-pdf.gcctngqs9v.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\item\sample-local-pdf.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"gcctngqs9v"},{"Name":"integrity","Value":"sha256-QMW3M9DiHFOp5A\u002Bm653wG7aJi4QvXxO9QttWJMKpfdA="},{"Name":"label","Value":"_content/EHL.Api/item/sample-local-pdf.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"49672"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022QMW3M9DiHFOp5A\u002Bm653wG7aJi4QvXxO9QttWJMKpfdA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 13 Sep 2025 09:32:52 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/EHL.Api/item/sample-local-pdf.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\item\sample-local-pdf.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-QMW3M9DiHFOp5A\u002Bm653wG7aJi4QvXxO9QttWJMKpfdA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"49672"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022QMW3M9DiHFOp5A\u002Bm653wG7aJi4QvXxO9QttWJMKpfdA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 13 Sep 2025 09:32:52 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

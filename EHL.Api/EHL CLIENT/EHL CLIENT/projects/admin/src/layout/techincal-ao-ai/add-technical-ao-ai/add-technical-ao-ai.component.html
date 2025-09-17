@@ -1,0 +1,79 @@
+<h5 mat-dialog-title>Add Technical Ao/Ai</h5>
+<form [formGroup]="TechnicalAoAi" (ngSubmit)="save()">
+  <mat-dialog-content>
+    <div class="row">
+      <div class="col-md-4">
+        <mat-form-field appearance="fill">
+          <mat-label>TechnicalAoAi Type</mat-label>
+          <mat-select formControlName="type" panelClass="custom-dropdown" placeholder="TechnicalAoAi type">
+            <mat-option [value]="'ALL'">ALL</mat-option>
+            <mat-option [value]="'ACCIDENTS'">ACCIDENTS</mat-option>
+            <mat-option [value]="'CONTRACTS'">CONTRACTS</mat-option>
+            <mat-option [value]="'IDEAS/INVENTIONS'">IDEAS/INVENTIONS</mat-option>
+            <mat-option [value]="'STORES AND EQUIPMENTS'">STORES AND EQUIPMENTS</mat-option>
+            <mat-option [value]="'VEHICLES'">VEHICLES</mat-option>
+          </mat-select>
+          @if (TechnicalAoAi.get('type')?.touched && TechnicalAoAi.get('type')?.hasError('required')) {
+            <mat-error>
+              TechnicalAoAi Type is required
+            </mat-error>
+          }
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field>
+          <mat-label>Subject</mat-label>
+          <input matInput appAlphanumericOnly formControlName="subject" placeholder="Add Subject" required >
+          @if (TechnicalAoAi.get('subject')?.touched && TechnicalAoAi.get('subject')?.hasError('required')) {
+            <mat-error>
+              TechnicalAoAi Subject is required
+            </mat-error>
+          }
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field>
+          <mat-label>Reference</mat-label>
+          <input matInput appAlphanumericOnly formControlName="reference" placeholder="Add Reference" require >
+          @if (TechnicalAoAi.get('reference')?.touched && TechnicalAoAi.get('reference')?.hasError('required')) {
+            <mat-error>
+              TechnicalAoAi Reference is required
+            </mat-error>
+          }
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button mat-raised-button type="button" (click)="fileInput.click()" class="input-btn">Select File</button>
+        <input #fileInput type="file" style="display:none" (change)="onFileSelected($event)" accept=".pdf, .doc, .docx, .xls, .xlsx" />
+
+        <br>
+          @if (alertMessage.length > 0) {
+            <div class="alert">{{alertMessage}}</div>
+          }
+          @if (fileName) {
+            <div class="file-info">
+              <div class="file-details">
+                <p><strong>File Name:</strong> {{ fileName }}</p>
+                @if (fileSizeFormatted.length > 0 && fileSizeFormatted != null) {
+                  <p><strong>File Size:</strong> {{ fileSizeFormatted }}</p>
+                }
+              </div>
+              <button mat-icon-button class="remove-btn" type="button" (click)="removeFile()">
+                <img src="cross.png" alt="">
+              </button>
+            </div>
+          }
+        </div>
+
+      </div>
+
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button type="button" class="btn btn-sm btn-danger" (click)="reset()">Reset</button>
+      <button type="button" class="btn btn-sm btn-warning" (click)="close()">Close</button>
+      <button type="submit" class="btn btn-sm btn-primary" >Save</button>
+    </mat-dialog-actions>
+  </form>
+

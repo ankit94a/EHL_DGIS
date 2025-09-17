@@ -1,0 +1,96 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  height: 50vh;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-size: 1.8em;
+  color: #333;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+}
+
+.card-content p {
+  flex-grow: 1;
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-content button,
+.card-content a.btn {
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(60deg, rgb(139, 0, 0), rgb(255, 99, 71));
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.card-content button:hover,
+.card-content a.btn:hover {
+  background: linear-gradient(60deg, rgb(255, 99, 71), rgb(139, 0, 0));
+}
+
+.folder-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.folder-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  height: 375px;
+  justify-content: center;
+}
+
+.folder-item:hover {
+  background-color: #e2e2e2;
+}
+
+.folder-item img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+.folder-item span {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+

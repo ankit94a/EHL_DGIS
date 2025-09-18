@@ -85,11 +85,28 @@ export class EqptComponent {
     this.createForm();
   }
   save() {
-    this.apiService.postWithHeader(this.apiUrl, this.eqpt).subscribe((res) => {
-      if (res) {
-        this.toastr.success('Eqpt added successfully', 'success');
-        this.dailogRef.close(true);
-      }
-    });
+    this.apiService.postWithHeader(this.apiUrl, this.eqpt).subscribe({
+          next: (res) => {
+            this.dailogRef.close(true);
+            this.toastr.success("Eqpt added successfully",'success');
+          },
+          error: (err) => {
+            if (err.status == 400) {
+              let messages: string[] = [];
+              let count = 1;
+              for (const key in err.error) {
+                if (err.error.hasOwnProperty(key)) {
+                  err.error[key].forEach((msg: string) => {
+                    messages.push(`${count}. ${msg}`);
+                    count++;
+                  });
+                }
+              }
+              this.toastr.error(messages.join('<br/>'), 'Validation Error', { enableHtml: true });
+              return;
+            }
+            this.toastr.error(err.message, 'Error');
+          },
+        });
   }
 }

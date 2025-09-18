@@ -63,7 +63,6 @@ drone: FormGroup;
   }
 
    save() {
-    debugger
     const formData = new FormData();
     const droneId = this.drone.get('id')?.value;
 
@@ -92,6 +91,20 @@ drone: FormGroup;
             this.dialogRef.close(true);
           },
           error: (err) => {
+            if (err.status == 400) {
+              let messages: string[] = [];
+              let count = 1;
+              for (const key in err.error) {
+                if (err.error.hasOwnProperty(key)) {
+                  err.error[key].forEach((msg: string) => {
+                    messages.push(`${count}. ${msg}`);
+                    count++;
+                  });
+                }
+              }
+              this.toastr.error(messages.join('<br/>'), 'Validation Error', { enableHtml: true });
+              return;
+            }
             this.toastr.error('Error submitting drone', 'Error');
           },
         });
@@ -117,6 +130,20 @@ drone: FormGroup;
             this.dialogRef.close(true);
           },
           error: (err) => {
+            if (err.status == 400) {
+              let messages: string[] = [];
+              let count = 1;
+              for (const key in err.error) {
+                if (err.error.hasOwnProperty(key)) {
+                  err.error[key].forEach((msg: string) => {
+                    messages.push(`${count}. ${msg}`);
+                    count++;
+                  });
+                }
+              }
+              this.toastr.error(messages.join('<br/>'), 'Validation Error', { enableHtml: true });
+              return;
+            }
             this.toastr.error('Error submitting drone', 'Error');
           },
         });

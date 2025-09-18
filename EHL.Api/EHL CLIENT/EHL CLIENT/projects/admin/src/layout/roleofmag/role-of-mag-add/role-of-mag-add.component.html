@@ -21,7 +21,7 @@
       <div class="col-md-4">
         <mat-form-field class="w-100">
           <mat-label>Name of MAG & Location</mat-label>
-          <input formControlName="name"  type="text" matInput placeholder="Name of MAG & Location" required />
+          <input formControlName="name" appAlphanumericOnly  type="text" matInput placeholder="Name of MAG & Location" required />
           @if (roleOfMag.get('name')?.touched && roleOfMag.get('name')?.invalid) {
             <mat-error>
               Name of MAG & Location is required
@@ -33,7 +33,7 @@
       <div class="col-md-4">
         <mat-form-field class="w-100">
           <mat-label>Name of Officer</mat-label>
-          <input formControlName="nameOfOfficer"  type="text" matInput placeholder="Name Of Officer" required />
+          <input formControlName="nameOfOfficer" appAlphanumericOnly  type="text" matInput placeholder="Name Of Officer" required />
           @if (roleOfMag.get('nameOfOfficer')?.touched && roleOfMag.get('nameOfOfficer')?.invalid) {
             <mat-error>
               Name Of Officer is required

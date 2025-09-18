@@ -124,6 +124,20 @@ export class IsplAddComponent {
             this.dialogRef.close(true);
           },
           error: (err) => {
+            if (err.status == 400) {
+              let messages: string[] = [];
+              let count = 1;
+              for (const key in err.error) {
+                if (err.error.hasOwnProperty(key)) {
+                  err.error[key].forEach((msg: string) => {
+                    messages.push(`${count}. ${msg}`);
+                    count++;
+                  });
+                }
+              }
+              this.toastr.error(messages.join('<br/>'), 'Validation Error', { enableHtml: true });
+              return;
+            }
             this.toastr.error('Error submitting ISPL', 'Error');
           },
         });
@@ -154,6 +168,20 @@ export class IsplAddComponent {
             this.dialogRef.close(true);
           },
           error: (err) => {
+            if (err.status == 400) {
+              let messages: string[] = [];
+              let count = 1;
+              for (const key in err.error) {
+                if (err.error.hasOwnProperty(key)) {
+                  err.error[key].forEach((msg: string) => {
+                    messages.push(`${count}. ${msg}`);
+                    count++;
+                  });
+                }
+              }
+              this.toastr.error(messages.join('<br/>'), 'Validation Error', { enableHtml: true });
+              return;
+            }
             this.toastr.error('Error submitting ISPL', 'Error');
           },
         });

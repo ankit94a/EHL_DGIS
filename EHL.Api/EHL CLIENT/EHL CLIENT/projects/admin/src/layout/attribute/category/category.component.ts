@@ -62,11 +62,28 @@ export class CategoryComponent {
     this.createForm();
   }
   save(){
-    this.apiSerive.postWithHeader(this.apiUrl ,this.category).subscribe(res =>{
-      if(res){
-        this.toastr.success("Category Action successfully",'success');
-        this.dailogRef.close(true);
-      }
-    })
+     this.apiSerive.postWithHeader(this.apiUrl, this.category).subscribe({
+          next: (res) => {
+            this.dailogRef.close(true);
+            this.toastr.success("Category Action successfully",'success');
+          },
+          error: (err) => {
+            if (err.status == 400) {
+              let messages: string[] = [];
+              let count = 1;
+              for (const key in err.error) {
+                if (err.error.hasOwnProperty(key)) {
+                  err.error[key].forEach((msg: string) => {
+                    messages.push(`${count}. ${msg}`);
+                    count++;
+                  });
+                }
+              }
+              this.toastr.error(messages.join('<br/>'), 'Validation Error', { enableHtml: true });
+              return;
+            }
+            this.toastr.error(err.message, 'Error');
+          },
+        });
   }
 }

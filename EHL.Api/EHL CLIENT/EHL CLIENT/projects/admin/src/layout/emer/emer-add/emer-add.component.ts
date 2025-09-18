@@ -18,10 +18,10 @@ import { SharedLibraryModule } from 'projects/shared/src/shared-library.module';
 
 
 @Component({
-    selector: 'app-emer-add',
-    imports: [SharedLibraryModule],
-    templateUrl: './emer-add.component.html',
-    styleUrl: './emer-add.component.scss'
+  selector: 'app-emer-add',
+  imports: [SharedLibraryModule],
+  templateUrl: './emer-add.component.html',
+  styleUrl: './emer-add.component.scss'
 })
 export class EmerAddComponent {
   emerForm: FormGroup;
@@ -37,8 +37,8 @@ export class EmerAddComponent {
   filePath;
   alertMessage: string = '';
   apiUrl: string = 'emer';
-  constructor(@Inject(MAT_DIALOG_DATA) data,private authService: AuthService,private apiService: ApiService,private fb: FormBuilder,
-    private dialogRef: MatDialogRef<EmerAddComponent>,private toastr: ToastrService) {
+  constructor(@Inject(MAT_DIALOG_DATA) data, private authService: AuthService, private apiService: ApiService, private fb: FormBuilder,
+    private dialogRef: MatDialogRef<EmerAddComponent>, private toastr: ToastrService) {
     this.wingId = parseInt(this.authService.getWingId());
     if (data) {
       this.bindDataToForm(data);
@@ -61,7 +61,7 @@ export class EmerAddComponent {
   bindDataToForm(form) {
     if (form.subFunction == 'SCALES')
       this.getSubFunctionField(form.subFunction);
-    if (form.subFunctionCategory != null &&form.subFunctionCategory != undefined) {
+    if (form.subFunctionCategory != null && form.subFunctionCategory != undefined) {
       this.getSubFunctionType(form.subFunctionCategory);
     }
     this.fileName = form.fileName;
@@ -111,9 +111,9 @@ export class EmerAddComponent {
   getCategory(wingId) {
     this.apiService.getWithHeaders('attribute/category' + wingId).subscribe((res) => {
       if (res) {
-          this.categoryList = res;
-        }
-      });
+        this.categoryList = res;
+      }
+    });
   }
 
   getSubCategory(categoryId, isUserInput: boolean = true) {
@@ -123,19 +123,19 @@ export class EmerAddComponent {
     }
     this.apiService.getWithHeaders('attribute/subcategory' + categoryId).subscribe((res) => {
       if (res) {
-          this.subCategoryList = res;
-          if (isUserInput) this.eqptList = [];
-        }
-      });
+        this.subCategoryList = res;
+        if (isUserInput) this.eqptList = [];
+      }
+    });
   }
 
   getEqpt(subCategoryId) {
     let categoryId = this.emerForm.get('categoryId')?.value;
     this.apiService.getWithHeaders('attribute/eqpt' + categoryId + '/' + subCategoryId).subscribe((res) => {
       if (res) {
-          this.eqptList = res;
-        }
-      });
+        this.eqptList = res;
+      }
+    });
   }
 
   getReadableFileSize(size: number): string {
@@ -172,7 +172,7 @@ export class EmerAddComponent {
     this.fileName = null;
     this.fileSizeFormatted = null;
     this.filePath = null;
-    this.emerForm.patchValue({emerFile: null});
+    this.emerForm.patchValue({ emerFile: null });
     const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
     if (fileInput) {
       fileInput.value = '';
@@ -234,7 +234,7 @@ export class EmerAddComponent {
           return (this.alertMessage = 'File is required');
         }
       }
-      var isValid = this.apiService.checkRequiredFieldsExceptEmerFile(this.emerForm,'emerFile');
+      var isValid = this.apiService.checkRequiredFieldsExceptEmerFile(this.emerForm, 'emerFile');
       if (isValid) {
         const category = this.categoryList.find((item) => item.id == this.emerForm.get('categoryId')?.value)?.name || '';
         const subCategory = this.subCategoryList.find((item) => item.id == this.emerForm.get('subCategoryId')?.value)?.name || '';
@@ -256,23 +256,22 @@ export class EmerAddComponent {
             this.toastr.success('Emer updated successfully', 'Success');
             this.dialogRef.close(true);
           },
-         error: (err) => {
-        if (err.status == 400) {
-          let messages: string[] = [];
-          let count = 1;
-          for (const key in err.error) {
-            if (err.error.hasOwnProperty(key)) {
-              err.error[key].forEach((msg: string) => {
-                messages.push(`${count}. ${msg}`);
-                count++;
-              });
+          error: (err) => {
+            if (err.status == 400) {
+              let messages: string[] = [];
+              let count = 1;
+              for (const key in err.error) {
+                if (err.error.hasOwnProperty(key)) {
+                  err.error[key].forEach((msg: string) => {
+                    messages.push(`${count}. ${msg}`);
+                    count++;
+                  });
+                }
+              }
+              this.toastr.error(messages.join('<br/>'), 'Validation Error', { enableHtml: true });
+              return;
             }
-          }
-          this.toastr.error(messages.join('<br/>'), 'Validation Error', { enableHtml: true });
-          return;
-        }
-        this.toastr.error('Error submitting form', 'Error');
-      },
+          },
         });
       } else {
         this.emerForm.markAllAsTouched();
@@ -306,8 +305,18 @@ export class EmerAddComponent {
             this.dialogRef.close(true);
           },
           error: (err) => {
-              if(err.status == 400){
-              this.toastr.error(err.error.Name,'Error');
+            if (err.status == 400) {
+              let messages: string[] = [];
+              let count = 1;
+              for (const key in err.error) {
+                if (err.error.hasOwnProperty(key)) {
+                  err.error[key].forEach((msg: string) => {
+                    messages.push(`${count}. ${msg}`);
+                    count++;
+                  });
+                }
+              }
+              this.toastr.error(messages.join('<br/>'), 'Validation Error', { enableHtml: true });
               return;
             }
             this.toastr.error(err.message, 'Error');

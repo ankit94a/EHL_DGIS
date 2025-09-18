@@ -16,6 +16,7 @@ import { DownloadFileType } from 'projects/shared/src/models/enum.model';
 import { DownloadService } from 'projects/shared/src/service/download.service';
 import { EcrTokenComponent } from 'projects/shared/src/component/ecr-token/ecr-token.component';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
     selector: 'app-eqpt-appreciation',
@@ -38,7 +39,7 @@ export class EqptAppreciationComponent extends TablePaginationSettingsConfig {
     
   }
   async ngOnInit(){
-    this.userType = await this.authService.getRoleType();
+    this.userType = await firstValueFrom(this.authService.roleType$);
     this.tablePaginationSettings.enableAction = true;
     this.filterModel.wingId = parseInt(this.authService.getWingId());
     this.filterModel.type = 'Eqpt Appreciation';

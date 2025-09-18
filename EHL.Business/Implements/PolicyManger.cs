@@ -27,7 +27,17 @@ namespace EHL.Business.Implements
 
 				if (policy.PolicyFile != null && policy.PolicyFile.Length > 0)
 				{
-					string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "policy");
+                    var allowedExtensions = new[] { ".pdf", ".xls", ".xlsx" };
+                    var allowedTypes = new[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" };
+
+                    var extension = Path.GetExtension(policy.PolicyFile.FileName).ToLower();
+                    var mimeType = policy.PolicyFile.ContentType.ToLower();
+
+                    if (!allowedExtensions.Contains(extension) || !allowedTypes.Contains(mimeType))
+                    {
+                        throw new InvalidOperationException("Invalid file type. Only PDF and Excel files are allowed.");
+                    }
+                    string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "policy");
 
 					if (!Directory.Exists(uploadsFolder))
 					{
@@ -60,7 +70,17 @@ namespace EHL.Business.Implements
 
 				if (policy.PolicyFile != null && policy.PolicyFile.Length > 0)
 				{
-					string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "policy");
+                    var allowedExtensions = new[] { ".pdf", ".xls", ".xlsx" };
+                    var allowedTypes = new[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" };
+
+                    var extension = Path.GetExtension(policy.PolicyFile.FileName).ToLower();
+                    var mimeType = policy.PolicyFile.ContentType.ToLower();
+
+                    if (!allowedExtensions.Contains(extension) || !allowedTypes.Contains(mimeType))
+                    {
+                        throw new InvalidOperationException("Invalid file type. Only PDF and Excel files are allowed.");
+                    }
+                    string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "policy");
 
 					if (!Directory.Exists(uploadsFolder))
 					{

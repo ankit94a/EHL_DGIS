@@ -9,6 +9,7 @@ import { SharedLibraryModule } from 'projects/shared/src/shared-library.module';
 import { RoleOfMagAddComponent } from '../role-of-mag-add/role-of-mag-add.component';
 import { RoleOfMag } from 'projects/shared/src/models/emer.model';
 import { DeactivateModel } from 'projects/shared/src/models/base.model';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
     selector: 'app-role-of-mag-list',
@@ -25,7 +26,7 @@ export class RoleOfMagListComponent extends TablePaginationSettingsConfig{
     
   }
   async ngOnInit(){
-    this.userType = await this.authService.getRoleType();
+    this.userType = await firstValueFrom(this.authService.roleType$);
     this.tablePaginationSettings.enableAction = true;
     if (this.userType == '1') {
       this.tablePaginationSettings.enableEdit = true;

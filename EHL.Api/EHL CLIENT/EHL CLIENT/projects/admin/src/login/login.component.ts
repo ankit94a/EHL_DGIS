@@ -71,8 +71,8 @@ export class LoginComponent {
 
         this.apiService.postWithHeader('auth/login', encryptedPayload).subscribe({
           next: (res: any) => {
-            debugger
             if (res) {
+              this.authService.setRoleType()
               this.dialog.closeAll();
               this.router.navigate(['/wing']);
               this.errorMessage = '';
@@ -82,7 +82,6 @@ export class LoginComponent {
             }
           },
           error: (err) => {
-            debugger
             this.errorMessage = err.error?.message || 'Login failed';
              this.toastr.error(this.errorMessage, "Login failed");
             this.router.navigate(['/landing']);

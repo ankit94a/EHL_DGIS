@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using EHL.Common.Helpers;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,8 @@ namespace EHL.Common.Models
 {
 	public class AttachedFile : Base
 	{
-		public IFormFile EmerFile { get; set; }
+        [AllowedFileTypes(new string[] { ".pdf", ".xls", ".xlsx" }, new string[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" })]
+        public IFormFile EmerFile { get; set; }
 		public long FileId { get; set; }
 		public byte[] Document { get; set; }
 		public string Name { get; set; }
@@ -22,6 +24,7 @@ namespace EHL.Common.Models
     {
         public string FileType { get; set; }
         public byte[] FileStorage { get; set; }
+        [AllowedFileTypes(new string[] { ".pdf", ".xls", ".xlsx" }, new string[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" })]
         public IFormFile PdfFile { get; set; }
     }
 

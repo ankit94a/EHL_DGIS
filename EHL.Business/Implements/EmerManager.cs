@@ -45,7 +45,17 @@ namespace EHL.Business.Implements
 
 				if (emer.EmerFile != null && emer.EmerFile.Length > 0)
 				{
-					string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "emer");
+                    var allowedExtensions = new[] { ".pdf", ".xls", ".xlsx" };
+                    var allowedTypes = new[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" };
+
+                    var extension = Path.GetExtension(emer.EmerFile.FileName).ToLower();
+                    var mimeType = emer.EmerFile.ContentType.ToLower();
+
+                    if (!allowedExtensions.Contains(extension) || !allowedTypes.Contains(mimeType))
+                    {
+                        throw new InvalidOperationException("Invalid file type. Only PDF and Excel files are allowed.");
+                    }
+                    string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "emer");
 					string filePath = Path.Combine(uploadsFolder, emer.EmerFile.FileName);
 
 					if (!Directory.Exists(uploadsFolder))
@@ -76,46 +86,70 @@ namespace EHL.Business.Implements
 		}
 
 
-		public async Task<bool> AddEmerIndex(EmerIndex emer)
+        public async Task<bool> AddEmerIndex(EmerIndex emer)
+        {
+            try
+            {
+                if (emer.EmerFile != null)
+                {
+                    var allowedExtensions = new[] { ".pdf", ".xls", ".xlsx" };
+                    var allowedTypes = new[]{"application/pdf","application/vnd.ms-excel","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"};
+
+                    var extension = Path.GetExtension(emer.EmerFile.FileName).ToLower();
+                    var mimeType = emer.EmerFile.ContentType.ToLower();
+
+                    if (!allowedExtensions.Contains(extension) || !allowedTypes.Contains(mimeType))
+                    {
+                        throw new InvalidOperationException("Invalid file type. Only PDF and Excel files are allowed.");
+                    }
+
+                    if (emer.EmerFile.Length > 0)
+                    {
+                        string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "index");
+                        string filePath = Path.Combine(uploadsFolder, emer.EmerFile.FileName);
+
+                        if (!Directory.Exists(uploadsFolder))
+                        {
+                            Directory.CreateDirectory(uploadsFolder);
+                        }
+
+                        emer.FileName = emer.EmerFile.FileName;
+                        emer.FilePath = emer.FileName;
+
+                        using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
+                        {
+                            await emer.EmerFile.CopyToAsync(fileStream);
+                        }
+                    }
+                }
+
+                return _emerDb.AddEmerIndex(emer);
+            }
+            catch (Exception ex)
+            {
+                EHLLogger.Error(ex, "Class=EmerManager, method=AddEmerIndex Error while adding the EmerModel data");
+                throw;
+            }
+        }
+
+        public async Task<bool> UpdateEmerIndex(EmerIndex emer)
 		{
 			try
 			{
 
 				if (emer.EmerFile != null && emer.EmerFile.Length > 0)
 				{
-					string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "index");
-					string filePath = Path.Combine(uploadsFolder, emer.EmerFile.FileName);
+                    var allowedExtensions = new[] { ".pdf", ".xls", ".xlsx" };
+                    var allowedTypes = new[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" };
 
-					if (!Directory.Exists(uploadsFolder))
-					{
-						Directory.CreateDirectory(uploadsFolder);
-					}
+                    var extension = Path.GetExtension(emer.EmerFile.FileName).ToLower();
+                    var mimeType = emer.EmerFile.ContentType.ToLower();
 
-					emer.FileName = emer.EmerFile.FileName;
-					emer.FilePath = emer.FileName;
-
-					using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None))
-					{
-						await emer.EmerFile.CopyToAsync(fileStream);
-					}
-				}
-				return _emerDb.AddEmerIndex(emer);
-			}
-			catch (Exception ex)
-			{
-				EHLLogger.Error(ex, "Class=EmerManager,method=AddEmerIndex Error while adding the EmerModel data");
-				throw new Exception("Error while adding the EmerModelIndex data.", ex);
-			}
-		}
-
-		public async Task<bool> UpdateEmerIndex(EmerIndex emer)
-		{
-			try
-			{
-
-				if (emer.EmerFile != null && emer.EmerFile.Length > 0)
-				{
-					string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "index");
+                    if (!allowedExtensions.Contains(extension) || !allowedTypes.Contains(mimeType))
+                    {
+                        throw new InvalidOperationException("Invalid file type. Only PDF and Excel files are allowed.");
+                    }
+                    string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "index");
 					string filePath = Path.Combine(uploadsFolder, emer.EmerFile.FileName);
 
 					if (!Directory.Exists(uploadsFolder))
@@ -147,7 +181,17 @@ namespace EHL.Business.Implements
 			{
 				if (emer.EmerFile != null && emer.EmerFile.Length > 0)
 				{
-					string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "emer");
+                    var allowedExtensions = new[] { ".pdf", ".xls", ".xlsx" };
+                    var allowedTypes = new[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" };
+
+                    var extension = Path.GetExtension(emer.EmerFile.FileName).ToLower();
+                    var mimeType = emer.EmerFile.ContentType.ToLower();
+
+                    if (!allowedExtensions.Contains(extension) || !allowedTypes.Contains(mimeType))
+                    {
+                        throw new InvalidOperationException("Invalid file type. Only PDF and Excel files are allowed.");
+                    }
+                    string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "emer");
 					string filePath = Path.Combine(uploadsFolder, emer.EmerFile.FileName);
 
 

@@ -29,7 +29,17 @@ namespace EHL.Business.Implements
 
 				if (technicalAoAi.TechnicalAoAiFile != null && technicalAoAi.TechnicalAoAiFile.Length > 0)
 				{
-					string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "technicalAoAi");
+                    var allowedExtensions = new[] { ".pdf", ".xls", ".xlsx" };
+                    var allowedTypes = new[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" };
+
+                    var extension = Path.GetExtension(technicalAoAi.TechnicalAoAiFile.FileName).ToLower();
+                    var mimeType = technicalAoAi.TechnicalAoAiFile.ContentType.ToLower();
+
+                    if (!allowedExtensions.Contains(extension) || !allowedTypes.Contains(mimeType))
+                    {
+                        throw new InvalidOperationException("Invalid file type. Only PDF and Excel files are allowed.");
+                    }
+                    string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "technicalAoAi");
 					string filePath = Path.Combine(uploadsFolder, technicalAoAi.TechnicalAoAiFile.FileName);
 
 					if (!Directory.Exists(uploadsFolder))
@@ -62,7 +72,17 @@ namespace EHL.Business.Implements
 			{
 				if (technicalAoAi.TechnicalAoAiFile != null && technicalAoAi.TechnicalAoAiFile.Length > 0)
 				{
-					string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "technicalAoAi");
+                    var allowedExtensions = new[] { ".pdf", ".xls", ".xlsx" };
+                    var allowedTypes = new[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" };
+
+                    var extension = Path.GetExtension(technicalAoAi.TechnicalAoAiFile.FileName).ToLower();
+                    var mimeType = technicalAoAi.TechnicalAoAiFile.ContentType.ToLower();
+
+                    if (!allowedExtensions.Contains(extension) || !allowedTypes.Contains(mimeType))
+                    {
+                        throw new InvalidOperationException("Invalid file type. Only PDF and Excel files are allowed.");
+                    }
+                    string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "technicalAoAi");
 					string filePath = Path.Combine(uploadsFolder, technicalAoAi.TechnicalAoAiFile.FileName);
 
 

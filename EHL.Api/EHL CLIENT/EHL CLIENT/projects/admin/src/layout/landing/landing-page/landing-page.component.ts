@@ -19,7 +19,7 @@ export class LandingPageComponent {
   latestTechnicalReference: Policy[] = [];
   ipAddress: string = '';
 
-  constructor(private downloadService: DownloadService, private apiService: ApiService, private dialogService: BISMatDialogService) {debugger
+  constructor(private downloadService: DownloadService, private apiService: ApiService, private dialogService: BISMatDialogService) {
   }
   ngOnInit() {
     this.getLatestPolicy();

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using EHL.Common.Helpers;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,8 @@ namespace EHL.Common.Models
 		public int WingId { get; set; }
 		public string Wing { get; set; }
 		public string NomenClature { get; set; }
-		public IFormFile DroneIcscFile { get; set; }
+        [AllowedFileTypes(new string[] { ".pdf", ".xls", ".xlsx" }, new string[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" })]
+        public IFormFile DroneIcscFile { get; set; }
 		public string Remarks { get; set; }
 		public long FileId { get; set; }
 		public byte[] FileBytes { get; set; }

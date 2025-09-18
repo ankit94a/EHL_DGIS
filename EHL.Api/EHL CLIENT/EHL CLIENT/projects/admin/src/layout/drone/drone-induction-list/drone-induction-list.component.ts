@@ -13,6 +13,7 @@ import { BISMatDialogService } from 'projects/shared/src/service/insync-mat-dial
 import { SharedLibraryModule } from 'projects/shared/src/shared-library.module';
 import { DroneInductionAddComponent } from '../drone-induction-add/drone-induction-add.component';
 import { DeleteModel } from 'projects/shared/src/models/attribute.model';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-drone-induction-list',
@@ -31,7 +32,7 @@ export class DroneInductionListComponent extends TablePaginationSettingsConfig {
 
   }
   async ngOnInit() {
-    this.userType = await this.authService.getRoleType();
+    this.userType = await firstValueFrom(this.authService.roleType$);
     if (this.userType == '1') {
       this.tablePaginationSettings.enableAction = true;
       this.tablePaginationSettings.enableEdit = true;

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using EHL.Common.Helpers;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace EHL.Common.Models
 		public long FileSize { get; set; }
 
 		public byte[] FileBytes { get; set; }
-		public IFormFile PolicyFile { get; set; }
+        [AllowedFileTypes(new string[] { ".pdf", ".xls", ".xlsx" }, new string[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" })]
+        public IFormFile PolicyFile { get; set; }
 	}
 }

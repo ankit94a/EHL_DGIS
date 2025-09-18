@@ -29,7 +29,17 @@ namespace EHL.Business.Implements
 
 				if (item.DroneIcscFile != null && item.DroneIcscFile.Length > 0)
 				{
-					string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "droneandicsc");
+                    var allowedExtensions = new[] { ".pdf", ".xls", ".xlsx" };
+                    var allowedTypes = new[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" };
+
+                    var extension = Path.GetExtension(item.DroneIcscFile.FileName).ToLower();
+                    var mimeType = item.DroneIcscFile.ContentType.ToLower();
+
+                    if (!allowedExtensions.Contains(extension) || !allowedTypes.Contains(mimeType))
+                    {
+                        throw new InvalidOperationException("Invalid file type. Only PDF and Excel files are allowed.");
+                    }
+                    string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "droneandicsc");
 					string filePath = Path.Combine(uploadsFolder, item.DroneIcscFile.FileName);
 
 					if (!Directory.Exists(uploadsFolder))
@@ -60,7 +70,17 @@ namespace EHL.Business.Implements
 			{
 				if (item.DroneIcscFile != null && item.DroneIcscFile.Length > 0)
 				{
-					string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "item");
+                    var allowedExtensions = new[] { ".pdf", ".xls", ".xlsx" };
+                    var allowedTypes = new[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" };
+
+                    var extension = Path.GetExtension(item.DroneIcscFile.FileName).ToLower();
+                    var mimeType = item.DroneIcscFile.ContentType.ToLower();
+
+                    if (!allowedExtensions.Contains(extension) || !allowedTypes.Contains(mimeType))
+                    {
+                        throw new InvalidOperationException("Invalid file type. Only PDF and Excel files are allowed.");
+                    }
+                    string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "item");
 					string filePath = Path.Combine(uploadsFolder, item.DroneIcscFile.FileName);
 
 

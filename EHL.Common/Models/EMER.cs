@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EHL.Common.Helpers;
 using Microsoft.AspNetCore.Http;
 using static EHL.Common.Enum.Enum;
 namespace EHL.Common.Models
@@ -19,12 +20,11 @@ namespace EHL.Common.Models
 		public string Category { get; set; }
 		public string SubCategory { get; set; }
 		public string Eqpt { get; set; }
-		public IFormFile EmerFile { get; set; }
+        [AllowedFileTypes(new string[] { ".pdf", ".xls", ".xlsx" },new string[] { "application/pdf", "application/vnd.ms-excel","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" })]
+        public IFormFile EmerFile { get; set; }
 		public string Remarks { get; set; }
 		public long FileId { get; set; }
 		public byte[] FileBytes { get; set; }
-
-
 		public string FileName { get; set; }
 		public string FilePath { get; set; }
 		public long FileSize { get; set; }
@@ -59,7 +59,8 @@ namespace EHL.Common.Models
 		public string Subject { get; set; }
 		public string FileName { get; set; }
 		public string FilePath { get; set; }
-		public IFormFile EmerFile { get; set; }
+        [AllowedFileTypes(new string[] { ".pdf", ".xls", ".xlsx" }, new string[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" })]
+        public IFormFile EmerFile { get; set; }
 		public byte[] FileBytes { get; set; }
 	}
 

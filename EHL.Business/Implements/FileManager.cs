@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using static EHL.Common.Enum.Enum;
 
 namespace EHL.Business.Implements
 {
@@ -28,5 +30,7 @@ namespace EHL.Business.Implements
         {
 			return _fileDB.GetPdf(type);
         }
+
+	
     }
 }

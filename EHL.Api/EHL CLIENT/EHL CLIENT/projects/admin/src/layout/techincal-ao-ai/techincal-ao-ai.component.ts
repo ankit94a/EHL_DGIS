@@ -15,6 +15,7 @@ import { DownloadService } from 'projects/shared/src/service/download.service';
 
 // import { EcrTokenComponent } from 'projects/shared/src/component/ecr-token/ecr-token.component';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
     selector: 'app-techincal-ao-ai',
@@ -35,7 +36,7 @@ export class TechincalAoAiComponent extends TablePaginationSettingsConfig {
     
   }
   async ngOnInit(){
-    this.userType = await this.authService.getRoleType();
+    this.userType = await firstValueFrom(this.authService.roleType$);
     this.tablePaginationSettings.enableAction = true;
     if (this.userType == '1') {
       this.isOfficerLoggedIn=true;

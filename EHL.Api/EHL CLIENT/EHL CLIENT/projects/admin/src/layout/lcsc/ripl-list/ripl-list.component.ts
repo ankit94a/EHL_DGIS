@@ -14,6 +14,7 @@ import { RiplAddComponent } from '../ripl-add/ripl-add.component';
 import { TablePaginationSettingsConfig } from 'projects/shared/src/component/zipper-table/table-settings.model';
 import { ZipperTableComponent } from 'projects/shared/src/component/zipper-table/zipper-table.component';
 import { SharedLibraryModule } from 'projects/shared/src/shared-library.module';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-ripl-list',
@@ -31,7 +32,7 @@ droneList = [];
 
   }
   async ngOnInit() {
-    this.userType = await this.authService.getRoleType();
+    this.userType = await firstValueFrom(this.authService.roleType$);
     this.tablePaginationSettings.enableAction = true;
     if (this.userType == '1') {
       this.tablePaginationSettings.enableEdit = true;

@@ -14,6 +14,7 @@ import { DownloadModel } from 'projects/shared/src/models/download.model';
 import { DownloadFileType } from 'projects/shared/src/models/enum.model';
 import { DeleteModel } from 'projects/shared/src/models/attribute.model';
 import { ToastrService } from 'ngx-toastr';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
     selector: 'app-emer-list',
@@ -32,7 +33,7 @@ export class EmerListComponent extends TablePaginationSettingsConfig {
     
   }
   async ngOnInit(){
-    this.userType = await this.authService.getRoleType();
+    this.userType = await firstValueFrom(this.authService.roleType$);
     this.tablePaginationSettings.enableAction = true;
     if (this.userType == '1') {
       this.tablePaginationSettings.enableEdit = true;

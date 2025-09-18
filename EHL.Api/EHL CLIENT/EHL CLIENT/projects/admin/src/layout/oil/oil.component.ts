@@ -14,6 +14,7 @@ import { DownloadModel } from 'projects/shared/src/models/download.model';
 import { DownloadFileType } from 'projects/shared/src/models/enum.model';
 import { DownloadService } from 'projects/shared/src/service/download.service';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { firstValueFrom } from 'rxjs';
 
 
 @Component({
@@ -35,7 +36,10 @@ export class OilComponent extends TablePaginationSettingsConfig {
     private toastr: ToastrService, private downloadService: DownloadService ,
   ) {
     super();
-    this.userType = this.authService.getRoleType();
+    
+  }
+ async ngOnInit(){
+  this.userType = await firstValueFrom(this.authService.roleType$);
     this.tablePaginationSettings.enableAction = true;
     if (this.userType == '1') {
       this.tablePaginationSettings.enableEdit = true;

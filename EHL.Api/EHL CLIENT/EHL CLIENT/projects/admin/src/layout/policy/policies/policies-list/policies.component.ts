@@ -12,6 +12,7 @@ import { DeleteModel } from 'projects/shared/src/models/attribute.model';
 import { DownloadModel } from 'projects/shared/src/models/download.model';
 import { DownloadFileType } from 'projects/shared/src/models/enum.model';
 import { DownloadService } from 'projects/shared/src/service/download.service';
+import { firstValueFrom } from 'rxjs';
 
 
 @Component({
@@ -35,7 +36,7 @@ export class PoliciesComponent extends TablePaginationSettingsConfig {
     
   }
   async ngOnInit(){
-    this.userType = await this.authService.getRoleType();
+    this.userType = await firstValueFrom(this.authService.roleType$);
     this.tablePaginationSettings.enableAction = true;
     this.filterModel.wingId = parseInt(this.authService.getWingId());  
     if (this.userType == '1') {      

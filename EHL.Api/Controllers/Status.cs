@@ -21,7 +21,7 @@ namespace EHL.Api.Controllers
         }
         [AllowAnonymous]
         [HttpPost,Route("roletype")]
-        public IActionResult GetRoleType(Login login)
+        public IActionResult GetRoleType()
         {
             
             bool isAuthenticated = HttpContext.User.Identity?.IsAuthenticated ?? false;

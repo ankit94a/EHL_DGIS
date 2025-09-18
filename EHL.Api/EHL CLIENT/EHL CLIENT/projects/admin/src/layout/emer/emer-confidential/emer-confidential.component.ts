@@ -5,7 +5,7 @@ import { ApiService } from 'projects/shared/src/service/api.service';
 import { PDFDocument, rgb, degrees, StandardFonts } from 'pdf-lib';
 import { PdfViewerComponent, PdfViewerModule } from 'ng2-pdf-viewer';
 import { HttpClient } from '@angular/common/http';
-import { map, Observable } from 'rxjs';
+import { firstValueFrom, map, Observable } from 'rxjs';
 
 
 
@@ -37,7 +37,7 @@ export class EmerConfidentialComponent{
  
   async ngOnInit(){
     (window as any).pdfWorkerSrc = '/pdfjs/pdf.worker.mjs'
-    this.userType = await this.authService.getRoleType();
+    this.userType = await firstValueFrom(this.authService.roleType$);
     if(this.userType == 1){
       
       this.getConfidentialFile()

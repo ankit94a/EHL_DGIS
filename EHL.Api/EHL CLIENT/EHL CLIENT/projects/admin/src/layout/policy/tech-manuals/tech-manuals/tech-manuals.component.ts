@@ -14,6 +14,7 @@ import { ToastrService } from 'ngx-toastr';
 import { DeleteModel } from 'projects/shared/src/models/attribute.model';
 import { DownloadFileType } from 'projects/shared/src/models/enum.model';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { firstValueFrom } from 'rxjs';
 
 
 @Component({
@@ -35,7 +36,7 @@ export class TechManualsComponent extends TablePaginationSettingsConfig{
     
   }
   async ngOnInit(){
-    this.userType = this.authService.getRoleType()
+   this.userType = await firstValueFrom(this.authService.roleType$);
     this.tablePaginationSettings.enableAction = true;
     if(this.userType == '1'){
       this.tablePaginationSettings.enableEdit = true;

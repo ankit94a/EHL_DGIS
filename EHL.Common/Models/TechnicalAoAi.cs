@@ -5,6 +5,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EHL.Common.Helpers;
+using Microsoft.AspNetCore.Http;
 
 namespace EHL.Common.Models
 {
@@ -23,6 +25,7 @@ namespace EHL.Common.Models
         public string Reference { get; set; }
 
         public string FileName { get; set; }
+        [AllowedFileTypes(new string[] { ".pdf", ".xls", ".xlsx" }, new string[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" })]
         public IFormFile TechnicalAoAiFile { get; set; }
         public string FilePath { get; set; }
         public long FileId { get; set; }

@@ -5,6 +5,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EHL.Common.Helpers;
+using Microsoft.AspNetCore.Http;
 using static EHL.Common.Enum.Enum;
 namespace EHL.Common.Models
 {
@@ -38,7 +40,8 @@ namespace EHL.Common.Models
         [Required]
         [RegularExpression(@"^[A-Za-z0-9\s,.-]{1,}", ErrorMessage = "Eqpt should only contain letters and spaces.")]
 
-        public string Eqpt { get; set; }      
+        public string Eqpt { get; set; }
+        [AllowedFileTypes(new string[] { ".pdf", ".xls", ".xlsx" }, new string[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" })]
         public IFormFile EmerFile { get; set; }
 
         [RegularExpression(@"^[A-Za-z0-9\s,.-]{1,}", ErrorMessage = "Remarks should only contain letters and spaces.")]
@@ -92,6 +95,7 @@ namespace EHL.Common.Models
         public string FileName { get; set;}
 
         public string FilePath { get; set; }
+        [AllowedFileTypes(new string[] { ".pdf", ".xls", ".xlsx" }, new string[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" })]
         public IFormFile EmerFile { get; set; }
 		public byte[] FileBytes { get; set; }
 	}

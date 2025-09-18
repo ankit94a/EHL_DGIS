@@ -13,6 +13,7 @@ import { IspplAddComponent } from '../isppl-add/isppl-add.component';
 import { ZipperTableComponent } from 'projects/shared/src/component/zipper-table/zipper-table.component';
 import { SharedLibraryModule } from 'projects/shared/src/shared-library.module';
 import { TablePaginationSettingsConfig } from 'projects/shared/src/component/zipper-table/table-settings.model';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-isppl-list',
@@ -31,7 +32,7 @@ droneList = [];
 
   }
    async ngOnInit() {
-    this.userType = await this.authService.getRoleType();
+    this.userType = await firstValueFrom(this.authService.roleType$);
     if (this.userType == '1') {
       this.tablePaginationSettings.enableAction = true;
       this.tablePaginationSettings.enableEdit = true;

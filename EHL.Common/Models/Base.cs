@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using EHL.Common.Helpers;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -35,8 +36,8 @@ namespace EHL.Common.Models
         public string Wing { get; set; }
         [RegularExpression(@"^[A-Za-z0-9\s,.-]{1,}", ErrorMessage = "NomenClature should only contain letters and spaces.")]
         public string NomenClature { get; set; }
-
-       public IFormFile DroneIcscFile { get; set; }
+        [AllowedFileTypes(new string[] { ".pdf", ".xls", ".xlsx" }, new string[] { "application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" })]
+        public IFormFile DroneIcscFile { get; set; }
 
         [RegularExpression(@"^[A-Za-z0-9\s,.-]{1,}", ErrorMessage = "Remarks should only contain letters and spaces.")]
         public string Remarks { get; set; }

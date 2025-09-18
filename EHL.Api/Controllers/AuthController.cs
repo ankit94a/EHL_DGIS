@@ -38,68 +38,159 @@ namespace EHL.Api.Controllers
 			_jwtManager = jwtManager;
 			_loginAttemptService = loginAttemptService;
 		}
+        //[AllowAnonymous]
+        //[HttpPost, Route("login")]
+        //public IActionResult DoLogin([FromBody] Login login)
+        //{
+
+        //    var ip = HttpContext.Connection.RemoteIpAddress?.ToString();
+        //    if (_loginAttemptService.IsBlocked(ip))
+        //    {
+        //        return Unauthorized(new { message = "Too many failed login attempts. Please try again after 15 minutes." });
+
+        //    }
+        //    var rsaService = new RSAKeyManager();
+        //    login.UserName = rsaService.Decrypt(login.UserName);
+        //    login.Password = rsaService.Decrypt(login.Password);
+
+        //    var user = _userManager.GetUserByEmail(login.UserName);
+        //    if (user.isLoggedIn == true)
+        //    {
+        //        return Unauthorized(new { message = "Admin Already Logged In." });
+        //    }
+
+        //    if (user != null)
+        //    {
+        //        bool captchaValid = ValidateCaptcha(login.Code, login.Token);
+        //        if (captchaValid)
+        //        {
+        //            //_loginAttemptService.ResetAttempts(ip);
+
+        //            bool isPasswordCorrect = BCrypt.Net.BCrypt.Verify(login.Password, user.Password);
+        //            if (isPasswordCorrect)
+        //            {
+        //                var jwtToken = _jwtManager.GenerateJwtToken(user);
+        //                Response.Cookies.Append("auth_token", jwtToken, new CookieOptions
+        //                {
+        //                    HttpOnly = true,
+        //                    Secure = true,
+        //                    SameSite = SameSiteMode.None,
+        //                    Expires = DateTimeOffset.UtcNow.AddMinutes(15)
+        //                });
+        //                _loginAttemptService.ResetAttempts(ip);
+        //                _userManager.updateLoggedIn(1, user.UserName);
+        //                return Ok(new { msg = "Login Successful" });
+        //            }
+        //            else
+        //            {
+        //                _loginAttemptService.RecordFailedAttempt(ip);
+        //                return Unauthorized(new { message = "Invalid password" });
+        //            }
+        //        }
+        //        else
+        //        {
+        //            return Unauthorized(new { message = "Invalid Captcha Code." });
+        //        }
+
+        //    }
+        //    else
+        //    {
+        //        //_loginAttemptService.RecordFailedAttempt(ip);
+        //        return Unauthorized(new { message = "Invalid username or password." });
+        //    }
+        //}
+
         [AllowAnonymous]
-		[HttpPost, Route("login")]
-		public IActionResult DoLogin([FromBody] Login login)
-		{
-
-			var ip = HttpContext.Connection.RemoteIpAddress?.ToString();
-			if (_loginAttemptService.IsBlocked(ip))
-			{
-                return Unauthorized(new { message = "Too many failed login attempts. Please try again after 15 minutes." });
-            
-            }
-         
-            var rsaService = new RSAKeyManager();
-            login.UserName = rsaService.Decrypt(login.UserName);
-            login.Password = rsaService.Decrypt(login.Password);
-          
-            var user = _userManager.GetUserByEmail(login.UserName);
-            if(user.isLoggedIn == true)
+        [HttpPost, Route("login")]
+        public IActionResult DoLogin([FromBody] Login login)
+        {
+            try
             {
-                return Unauthorized(new { message = "Admin Already Logged In." });
+                var ip = HttpContext.Connection.RemoteIpAddress?.ToString();
+
+                if (_loginAttemptService.IsBlocked(ip))
+                {
+                    return Unauthorized(new { message = "Too many failed login attempts. Please try again after 15 minutes." });
+                }
+
+                var rsaService = new RSAKeyManager();
+
+                // Defensive checks before decryption
+                if (string.IsNullOrEmpty(login.UserName) || string.IsNullOrEmpty(login.Password))
+                {
+                    return BadRequest(new { message = "Username and password are required." });
+                }
+
+                string decryptedUserName, decryptedPassword;
+                try
+                {
+                    decryptedUserName = rsaService.Decrypt(login.UserName);
+                    decryptedPassword = rsaService.Decrypt(login.Password);
+                }
+                catch (Exception)
+                {
+                    return BadRequest(new { message = "Invalid credentials format." });
+                }
+
+                var user = _userManager.GetUserByEmail(decryptedUserName);
+
+                if (user == null)
+                {
+                    return Unauthorized(new { message = "Invalid username or password." });
+                }
+
+                if (user.isLoggedIn)
+                {
+                    return Unauthorized(new { message = "Admin already logged in." });
+                }
+
+                bool captchaValid = ValidateCaptcha(login.Code, login.Token);
+                if (!captchaValid)
+                {
+                    return Unauthorized(new { message = "Invalid captcha code." });
+                }
+
+                bool isPasswordCorrect;
+                try
+                {
+                    isPasswordCorrect = BCrypt.Net.BCrypt.Verify(decryptedPassword, user.Password);
+                }
+                catch
+                {
+                    return Unauthorized(new { message = "Invalid password." });
+                }
+
+                if (!isPasswordCorrect)
+                {
+                    _loginAttemptService.RecordFailedAttempt(ip);
+                    return Unauthorized(new { message = "Invalid password." });
+                }
+
+                // Password correct -> issue token
+                var jwtToken = _jwtManager.GenerateJwtToken(user);
+                Response.Cookies.Append("auth_token", jwtToken, new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.None,
+                    Expires = DateTimeOffset.UtcNow.AddMinutes(15)
+                });
+
+                _loginAttemptService.ResetAttempts(ip);
+                _userManager.updateLoggedIn(1, user.UserName);
+
+                return Ok(new { msg = "Login successful." });
             }
+            catch (Exception ex)
+            {
+                // Log the exception internally
+                EHLLogger.Error(ex, "Error during login.");
 
-            if (user != null)
-			{
-				bool captchaValid = ValidateCaptcha(login.Code, login.Token);
-				if (captchaValid)
-				{
-					//_loginAttemptService.ResetAttempts(ip);
-
-                    bool isPasswordCorrect = BCrypt.Net.BCrypt.Verify(login.Password, user.Password);
-					if (isPasswordCorrect)
-					{
-						var jwtToken = _jwtManager.GenerateJwtToken(user);
-                        Response.Cookies.Append("auth_token", jwtToken, new CookieOptions
-                        {
-                            HttpOnly = true,
-                            Secure = true,
-                            SameSite = SameSiteMode.None,
-                            Expires = DateTimeOffset.UtcNow.AddMinutes(15)
-                        });
-                        _loginAttemptService.ResetAttempts(ip);
-                        _userManager.updateLoggedIn(1, user.UserName);
-                        return Ok(new { msg = "Login Successful"});
-					}
-					else
-					{
-                        _loginAttemptService.RecordFailedAttempt(ip);
-                        return Unauthorized(new { message = "Invalid password" });
-					}
-				}
-				else
-				{
-					return Unauthorized(new { message = "Invalid Captcha Code." });
-				}
-
-			}
-			else
-			{
-				//_loginAttemptService.RecordFailedAttempt(ip);
-				return Unauthorized(new { message = "Invalid username or password." });
-			}
-		}
+                // Return sanitized error
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    new { message = "An unexpected error occurred. Please try again later." });
+            }
+        }
 
 
         [HttpGet("publickey")]
@@ -141,7 +232,7 @@ namespace EHL.Api.Controllers
         }
         [AllowAnonymous]
         [HttpPost, Route("logout")]
-        public IActionResult Logout(Login login)
+        public IActionResult Logout()
         {
             Response.Cookies.Append("auth_token", "", new CookieOptions
             {

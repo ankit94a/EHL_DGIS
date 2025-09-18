@@ -14,6 +14,7 @@ import { DownloadModel } from 'projects/shared/src/models/download.model';
 import { DownloadFileType } from 'projects/shared/src/models/enum.model';
 import { DownloadService } from 'projects/shared/src/service/download.service';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
     selector: 'app-mrls',
@@ -31,7 +32,7 @@ export class MrlsDistComponent extends TablePaginationSettingsConfig {
     
   }
   async ngOnInit(){
-    this.userType = await this.authService.getRoleType();
+    this.userType = await firstValueFrom(this.authService.roleType$);
     this.tablePaginationSettings.enableAction = true;
     if (this.userType == '1') {
       this.tablePaginationSettings.enableEdit = true;

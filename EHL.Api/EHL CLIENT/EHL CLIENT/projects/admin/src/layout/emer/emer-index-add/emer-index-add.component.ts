@@ -168,9 +168,23 @@ export class EmerIndexAddComponent {
           this.toastr.success('Form submitted successfully', 'Success');
           this.dialogRef.close(true);
         },
-        error: (err) => {
-          this.toastr.error('Error submitting form', 'Error');
-        },
+          error: (err) => {
+        if (err.status == 400) {
+          let messages: string[] = [];
+          let count = 1;
+          for (const key in err.error) {
+            if (err.error.hasOwnProperty(key)) {
+              err.error[key].forEach((msg: string) => {
+                messages.push(`${count}. ${msg}`);
+                count++;
+              });
+            }
+          }
+          this.toastr.error(messages.join('<br/>'), 'Validation Error', { enableHtml: true });
+          return;
+        }
+        this.toastr.error('Error submitting form', 'Error');
+      },
       });
     } else {
       this.emerForm.markAllAsTouched();

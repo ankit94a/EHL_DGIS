@@ -256,13 +256,23 @@ export class EmerAddComponent {
             this.toastr.success('Emer updated successfully', 'Success');
             this.dialogRef.close(true);
           },
-          error: (err) => {
-              if(err.status == 400){
-              this.toastr.error(err.error.Name,'Error');
-              return;
+         error: (err) => {
+        if (err.status == 400) {
+          let messages: string[] = [];
+          let count = 1;
+          for (const key in err.error) {
+            if (err.error.hasOwnProperty(key)) {
+              err.error[key].forEach((msg: string) => {
+                messages.push(`${count}. ${msg}`);
+                count++;
+              });
             }
-            this.toastr.error('Error while updating emer', 'Error');
-          },
+          }
+          this.toastr.error(messages.join('<br/>'), 'Validation Error', { enableHtml: true });
+          return;
+        }
+        this.toastr.error('Error submitting form', 'Error');
+      },
         });
       } else {
         this.emerForm.markAllAsTouched();
